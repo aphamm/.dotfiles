@@ -1,0 +1,3 @@
+**/*.swp
+Brewfile.lock.json
+.DS_STORE
