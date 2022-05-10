@@ -34,3 +34,10 @@ Appstore
 iTerm2 Settings
 
 [Fonts](https://www.jetbrains.com/lp/mono/)
+
+Todo Items
+[ ] Look more into Starship Configurations
+[ ] Update BrewLock
+[ ] Update Rayconfig
+[ ] Get better VS Code iTerm colors & update congid
+[ ] Update readme...
