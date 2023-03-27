@@ -31,6 +31,9 @@ Zoom
 Appstore
 - Pages
 
+ssh-copy-id remote_username@server_ip_address
+
+
 iTerm2 Settings
 
 [Fonts](https://www.jetbrains.com/lp/mono/)
@@ -41,3 +44,10 @@ Todo Items
 [ ] Update Rayconfig
 [ ] Get better VS Code iTerm colors & update congid
 [ ] Update readme...
+
+
+Compress tar archive
+tar -czvf LotsOfFiles.tgz LotsOfFiles
+
+UNcompress a tar archive
+tar -xvf LotsOfFiles.tgz
