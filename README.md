@@ -2,52 +2,56 @@
 
 Here are my custom config files for my MacBook setup.
 
-```
-$ xcode-select --install
-$ softwareupdate --install-rosetta # intel processor
-```
-Create GitHub Links
-- [SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+install xcode
 
-Clone this remote repo
 ```
-$ git clone git@github.com:onlypham/.dotfiles.git
+xcode-select --install
 ```
 
+install rosetta
 
-Install Brew
 ```
-$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+softwareupdate --install-rosetta
+```
+
+install homebrew
+
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/pham/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+```
+
+[github](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+
+```
+# generate ssh key
+ssh-keygen -t ed25519 -C "austinpham77@gmail.com"
+# start ssh-agent in background
+eval "$(ssh-agent -s)"
+# create file to load keys
+echo "Host github.com
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_ed25519" >> ~/.ssh/config
+# add key to ssh-agent
+ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+# copy ssh public key to clipboard
+pbcopy < ~/.ssh/id_ed25519.pub
+# add key on github
+```
+
+clone repo into home
+
+```
+git clone git@github.com:onlypham/.dotfiles.git
+```
+
+install brewfiles
+
+```
 brew bundle --file=~/.dotfiles/Brewfile
 brew bundle dump --force --describe --file=~/.dotfiles/Brewfile # update dependencies
 ```
-Import Raycast 
-password: austinpham
 
-Spotify
-
-Zoom
-
-Appstore
-- Pages
-
-ssh-copy-id remote_username@server_ip_address
-
-
-iTerm2 Settings
-
-[Fonts](https://www.jetbrains.com/lp/mono/)
-
-Todo Items
-[ ] Look more into Starship Configurations
-[ ] Update BrewLock
-[ ] Update Rayconfig
-[ ] Get better VS Code iTerm colors & update congid
-[ ] Update readme...
-
-
-Compress tar archive
-tar -czvf LotsOfFiles.tgz LotsOfFiles
-
-UNcompress a tar archive
-tar -xvf LotsOfFiles.tgz
+raycast password: austinpham
