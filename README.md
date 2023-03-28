@@ -55,3 +55,5 @@ brew bundle dump --force --describe --file=~/.dotfiles/Brewfile # update depende
 ```
 
 raycast password: austinpham
+
+[uad software](https://www.uaudio.com/downloads/uad)
