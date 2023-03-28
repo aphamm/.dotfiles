@@ -56,4 +56,4 @@ brew bundle dump --force --describe --file=~/.dotfiles/Brewfile # update depende
 
 raycast password: austinpham
 
-[uad software](https://www.uaudio.com/downloads/uad)
+[uad software](https://help.uaudio.com/hc/en-us/articles/360057137692-Apple-Silicon-M1-M2-Compatibility-Info?_gl=1*1qpuawn*_ga*MTYzMjUzNzU0Ny4xNjgwMDI1NTUz*_ga_CPJ5176QFT*MTY4MDAyNTU2NC4xLjEuMTY4MDAyNTkwNy4wLjAuMA..)
