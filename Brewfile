@@ -10,6 +10,8 @@ brew "r"
 
 # Sound and music editor
 cask "ableton-live-suite"
+# Chromium based browser
+cask "arc"
 # Free monospaced font with programming ligatures
 cask "font-fira-code"
 # Interface for reading and syncing eBooks
