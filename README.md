@@ -1,6 +1,6 @@
 Here is my custom configuration for my MacBook Pro 2023 (M2 Pro) 😎
 
-# Automated Configs
+# Automated Configs 👨‍💻
 
 First, run the `init.sh` script
 
@@ -33,7 +33,7 @@ git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles
 ~/.dotfiles/setup.sh
 ```
 
-### Automated Configs
+# Manual Configs 🤮
 
 Import `pham.rayconfig` settings with password `austinpham`
 
