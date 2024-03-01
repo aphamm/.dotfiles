@@ -1,8 +1,3 @@
-# Configs
-
-Here are my custom config files for my MacBook setup.
-
-```
 # install xcode
 xcode-select --install
 
@@ -22,18 +17,3 @@ eval "$(ssh-agent -s)"
 ssh-add --apple-use-keychain ~/.ssh/id_ed25519
 # copy ssh public key to clipboard
 pbcopy < ~/.ssh/id_ed25519.pub
-```
-
-raycast: austinpham
-
-### Audio Software
-
-[uad software](https://help.uaudio.com/hc/en-us/articles/360057137692-Apple-Silicon-M1-M2-Compatibility-Info?_gl=1*1qpuawn*_ga*MTYzMjUzNzU0Ny4xNjgwMDI1NTUz*_ga_CPJ5176QFT*MTY4MDAyNTU2NC4xLjEuMTY4MDAyNTkwNy4wLjAuMA..)
-
-[soothe2](https://oeksound.com/downloads/)
-
-[serum / rc20](https://splice.com/plugins/your-plugins)
-
-fabfilter, valhalla, soundtoys
-
-reconfigure virtual channels
