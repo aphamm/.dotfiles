@@ -1,8 +1,10 @@
-# Configs
+Here is my custom configuration for my MacBook Pro 2023 (M2 Pro) 😎
 
-Here are my custom config files for my MacBook setup.
+# Automated Configs
 
-```
+First, run the `init.sh` script
+
+```shell
 # install xcode
 xcode-select --install
 
@@ -24,9 +26,18 @@ ssh-add --apple-use-keychain ~/.ssh/id_ed25519
 pbcopy < ~/.ssh/id_ed25519.pub
 ```
 
-raycast: austinpham
+After saving ssh keys to your GitHub, clone repo and run `setup.sh` script.
 
-### Audio Software
+```shell
+git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles
+~/.dotfiles/setup.sh
+```
+
+### Automated Configs
+
+Import `pham.rayconfig` settings with password `austinpham`
+
+#### Audio Software
 
 [uad software](https://help.uaudio.com/hc/en-us/articles/360057137692-Apple-Silicon-M1-M2-Compatibility-Info?_gl=1*1qpuawn*_ga*MTYzMjUzNzU0Ny4xNjgwMDI1NTUz*_ga_CPJ5176QFT*MTY4MDAyNTU2NC4xLjEuMTY4MDAyNTkwNy4wLjAuMA..)
 
