@@ -42,6 +42,12 @@ git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles
 
 - Retreive documents from SSD (`Pham`, `Documents`)
 
+- System Preferences
+  - Keyboard > Keyboard Shortcuts >
+    - Remove Missiong Control
+    - Save Picture of selected area as file: Shift Command 3
+    - Copy picture of selected area to clipboard: Shift Command 4
+
 ## Audio Software
 
 - [uad software](https://help.uaudio.com/hc/en-us/articles/360057137692-Apple-Silicon-M1-M2-Compatibility-Info?_gl=1*1qpuawn*_ga*MTYzMjUzNzU0Ny4xNjgwMDI1NTUz*_ga_CPJ5176QFT*MTY4MDAyNTU2NC4xLjEuMTY4MDAyNTkwNy4wLjAuMA..)
