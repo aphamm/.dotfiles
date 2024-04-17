@@ -1,0 +1,50 @@
+# ~/.config/starship.toml
+
+# no newline between prompts
+add_newline = false
+
+format = """
+$shlvl\
+$username\
+$hostname\
+$singularity\
+$kubernetes\
+$directory\
+$git_branch\
+$git_commit\
+$docker_context\
+$c\
+$cmake\
+$python\
+$rust\
+$sudo\
+$container\
+$character"""
+
+[shlvl]
+disabled = false
+style = "bold red"
+format = "[$shlvl]($style) "
+threshold = 0
+
+[username]
+format = "[$user@]($style)"
+style_user="bold green"
+
+[hostname]
+style="bold green"
+format = "[$hostname]($style) "
+
+[directory]
+truncation_length = 3
+fish_style_pwd_dir_length = 2
+
+[git_branch]
+format = "[$symbol$branch]($style) "
+symbol = '↪ '
+
+[python]
+format = '[${symbol}(${version} )(\($virtualenv\) )]($style)'
+version_format = 'v${major}.${minor}'
+detect_files = []
+detect_folders = ['.venv']

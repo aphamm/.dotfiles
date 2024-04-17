@@ -2,38 +2,34 @@ Here is my custom configuration for my MacBook Pro 2023 (M2 Pro) 😎
 
 # Automated Configs 👨‍💻
 
-First, run the `init.sh` script
+First, run the following in your terminal.
 
 ```shell
-# install xcode
-xcode-select --install 
-
-# install rosetta
-softwareupdate --install-rosetta
+# install xcode & rosetta
+xcode-select --install && softwareupdate --install-rosetta
 
 # install homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/pham/.zprofile
-eval "$(/opt/homebrew/bin/brew shellenv)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" && \
+  (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/pham/.zprofile && \
+  eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# generate ssh key
-ssh-keygen -t ed25519 -C "austinpham77@gmail.com"
+# change default shell
+chsh -s $(which zsh)
 
-# start ssh-agent in background
-eval "$(ssh-agent -s)"
-
-# add key to ssh-agent
-ssh-add --apple-use-keychain ~/.ssh/id_ed25519
-
-# copy ssh public key to clipboard
-pbcopy < ~/.ssh/id_ed25519.pub
+# generate ssh key, start ssh-agent, add key to agent, copy to clipboard
+ssh-keygen -t ed25519 -C "austinpham77@gmail.com" && \
+  eval "$(ssh-agent -s)" && \
+  ssh-add --apple-use-keychain ~/.ssh/id_ed25519 && \
+  pbcopy < ~/.ssh/id_ed25519.pub
 ```
 
 Save ssh key to [GitHub](https://github.com/settings/keys) then...
 
 ```shell
-git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles
-~/.dotfiles/setup.sh
+git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
+  cd .dotfiles && git config --global user.name “apham” && \
+  git config --global user.email “austinpham77@gmail.com” && \
+  ~/.dotfiles/init.sh
 ```
 
 # Manual Configs 🤮

@@ -1,0 +1,35 @@
+{
+    "workbench.sideBar.location": "right",
+    "workbench.statusBar.visible": false,
+    "workbench.iconTheme": "vscode-icons",
+
+    "editor.fontFamily": "Fira Code",
+    "editor.minimap.enabled": false,
+    "editor.scrollbar.horizontal": "hidden",
+    "editor.scrollbar.vertical": "hidden",
+    "editor.fontLigatures": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.rulers": [120],
+    "editor.cursorBlinking": "phase",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.cursorStyle": "block-outline",
+    "editor.wordWrap": "wordWrapColumn",
+
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit",
+            "source.organizeImports": "explicit"
+        },
+        "editor.defaultFormatter": "charliermarsh.ruff"
+      },
+
+    "notebook.formatOnSave.enabled": true,
+    "notebook.codeActionsOnSave": {
+        "notebook.source.fixAll": "explicit",
+        "notebook.source.organizeImports": "explicit"
+    },
+
+    "files.autoSave": "onFocusChange"
+
+}
