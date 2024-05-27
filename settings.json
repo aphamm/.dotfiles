@@ -1,6 +1,8 @@
 {
     "workbench.sideBar.location": "right",
     "workbench.statusBar.visible": false,
+    "workbench.colorTheme": "Theme Darker",
+    "workbench.startupEditor": "none",
     "workbench.iconTheme": "vscode-icons",
 
     "editor.fontFamily": "Fira Code",
@@ -9,11 +11,12 @@
     "editor.scrollbar.vertical": "hidden",
     "editor.fontLigatures": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.rulers": [120],
     "editor.cursorBlinking": "phase",
     "editor.cursorSmoothCaretAnimation": "on",
     "editor.cursorStyle": "block-outline",
+    "editor.rulers": [120],
     "editor.wordWrap": "wordWrapColumn",
+    "editor.accessibilitySupport": "off",
 
     "[python]": {
         "editor.formatOnSave": true,
@@ -30,6 +33,10 @@
         "notebook.source.organizeImports": "explicit"
     },
 
-    "files.autoSave": "onFocusChange"
+    "files.autoSave": "onFocusChange",
+    "explorer.confirmDragAndDrop": false,
+    "terminal.integrated.shellIntegration.enabled": false,
+    "accessibility.signals.sounds.volume": 0,
+    "github.copilot.editor.enableAutoCompletions": true
 
 }

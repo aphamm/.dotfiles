@@ -9,5 +9,6 @@ rm ~/.zshrc
 ln -s ~/.dotfiles/.zshrc ~/.zshrc
 rm ~/.config/starship.toml
 ln -s ~/.dotfiles/starship.toml ~/.config/starship.toml
-rm ~/Library/Application\ Support/Code/User/settings.json
-ls -s ~/.dotfiles/settings.json ~/Library/Application\ Support/Code/User/settings.json
+
+# copy settings
+cp ~/.dotfiles/settings.json ~/Library/Application\ Support/Code/User/settings.json

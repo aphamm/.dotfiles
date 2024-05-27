@@ -34,15 +34,17 @@ git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
 
 # Manual Configs 🤮
 
-- Import `pham.rayconfig` settings with password `austinpham`
+- Import `rayconfig` settings with password `austinpham`
 
-- Retreive documents from SSD (`Pham`, `Documents`)
+- Retreive documents from SSD (`Pham`)
 
 - System Preferences
   - Keyboard > Keyboard Shortcuts >
     - Remove Missiong Control
     - Save Picture of selected area as file: Shift Command 3
     - Copy picture of selected area to clipboard: Shift Command 4
+
+- [Route system sounds to Apollo Virtual Channels](https://www.youtube.com/watch?v=9K3D7kNb5DI): Audio MIDI Setup > Universal Audio Thunderbolt > Output > Configure Speakers > Apply > Done
 
 ## Audio Software
 
@@ -52,13 +54,7 @@ git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
 
 - [serum/rc20](https://splice.com/plugins/your-plugins)
 
-- [Route system sounds to Apollo Virtual Channels](https://www.youtube.com/watch?v=9K3D7kNb5DI): Audio MIDI Setup > Universal Audio Thunderbolt > Output > Configure Speakers > Apply > Done
-
-- cracked plugins: fabfilter, valhalla
-
-## Other Software
-
-- [Keynote](https://www.apple.com/keynote/)
+- Cracked: fabfilter, valhalla
 
 # Factory Reset
 
