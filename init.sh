@@ -7,7 +7,8 @@ sudo pmset repeat restart MTWRFS  05:00:00
 # create symlinks
 rm ~/.zshrc
 ln -s ~/.dotfiles/.zshrc ~/.zshrc
-rm ~/.config/starship.toml
+
+mkdir -p ~/.config
 ln -s ~/.dotfiles/starship.toml ~/.config/starship.toml
 
 # copy settings

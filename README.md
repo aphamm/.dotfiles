@@ -27,7 +27,7 @@ Save ssh key to [GitHub](https://github.com/settings/keys) then...
 
 ```shell
 git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
-  cd .dotfiles && git config --global user.name “apham” && \
+  cd ~/.dotfiles && git config --global user.name “apham” && \
   git config --global user.email “austinpham77@gmail.com” && \
   ~/.dotfiles/init.sh
 ```
@@ -40,19 +40,21 @@ git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
 
 - System Preferences
   - Keyboard > Keyboard Shortcuts >
-    - Remove Missiong Control
+    - Remove Mission Control
+    - Remove Spotlight
     - Save Picture of selected area as file: Shift Command 3
     - Copy picture of selected area to clipboard: Shift Command 4
+  - Desktop & Dock > Default web browser > Arc
 
 - [Route system sounds to Apollo Virtual Channels](https://www.youtube.com/watch?v=9K3D7kNb5DI): Audio MIDI Setup > Universal Audio Thunderbolt > Output > Configure Speakers > Apply > Done
 
 ## Audio Software
 
-- [uad software](https://help.uaudio.com/hc/en-us/articles/360057137692-Apple-Silicon-M1-M2-Compatibility-Info?_gl=1*1qpuawn*_ga*MTYzMjUzNzU0Ny4xNjgwMDI1NTUz*_ga_CPJ5176QFT*MTY4MDAyNTU2NC4xLjEuMTY4MDAyNTkwNy4wLjAuMA..)
+- [UAD Software](https://help.uaudio.com/hc/en-us/articles/360057137692-Apple-Silicon-M1-M2-Compatibility-Info?_gl=1*1qpuawn*_ga*MTYzMjUzNzU0Ny4xNjgwMDI1NTUz*_ga_CPJ5176QFT*MTY4MDAyNTU2NC4xLjEuMTY4MDAyNTkwNy4wLjAuMA..)
 
-- [soothe2](https://oeksound.com/downloads/)
+- [Soothe2](https://oeksound.com/downloads/)
 
-- [serum/rc20](https://splice.com/plugins/your-plugins)
+- [Serum & RC20](https://splice.com/plugins/your-plugins)
 
 - Cracked: fabfilter, valhalla
 

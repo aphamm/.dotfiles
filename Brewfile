@@ -1,7 +1,4 @@
 tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/cask-fonts"
-tap "homebrew/core"
 
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.12"
