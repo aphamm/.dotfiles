@@ -5,8 +5,12 @@ Here is my custom configuration for my MacBook Pro 2023 (M2 Pro) 😎
 First, run the following in your terminal.
 
 ```shell
-# install xcode & rosetta
-xcode-select --install && softwareupdate --install-rosetta
+# install xcode CLI & rosetta
+# xcode-select --install
+touch /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress;
+softwareupdate -i -a
+rm /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress && \
+softwareupdate --install-rosetta --agree-to-license
 
 # install homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" && \
@@ -27,8 +31,8 @@ Save ssh key to [GitHub](https://github.com/settings/keys) then...
 
 ```shell
 git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
-  cd ~/.dotfiles && git config --global user.name “apham” && \
-  git config --global user.email “austinpham77@gmail.com” && \
+  cd ~/.dotfiles && git config --global user.name aphamm && \
+  git config --global user.email austinpham77@gmail.com && \
   ~/.dotfiles/init.sh
 ```
 

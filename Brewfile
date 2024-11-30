@@ -1,5 +1,7 @@
+# https://gist.github.com/ChristopherA/a579274536aab36ea9966f301ff14f3f
 tap "homebrew/bundle"
-
+tap "buo/cask-upgrade"
+brew "mas"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.12"
 # Kubernetes command-line interface
@@ -24,6 +26,8 @@ cask "arc"
 cask "docker"
 # Free monospaced font with programming ligatures
 cask "font-fira-code"
+# Developer targeted fonts with a high number of glyphs
+cask "font-jetbrains-mono-nerd-font"
 # Software for iLok devices
 cask "ilok-license-manager"
 # Control your tools with a few keystrokes
@@ -57,6 +61,7 @@ vscode "ms-toolsai.vscode-jupyter-powertoys"
 vscode "ms-vscode-remote.remote-containers"
 vscode "ms-vscode-remote.remote-ssh"
 vscode "ms-vscode-remote.remote-ssh-edit"
+vscode "ms-vscode.cmake-tools"
 vscode "ms-vscode.cpptools"
 vscode "ms-vscode.cpptools-extension-pack"
 vscode "ms-vscode.cpptools-themes"
@@ -67,4 +72,5 @@ vscode "reditorsupport.r"
 vscode "tal7aouy.theme"
 vscode "tamasfe.even-better-toml"
 vscode "tomoki1207.pdf"
+vscode "twxs.cmake"
 vscode "vscode-icons-team.vscode-icons"
