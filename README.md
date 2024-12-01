@@ -14,11 +14,7 @@ softwareupdate --install-rosetta --agree-to-license
 
 # install homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" && \
-  (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/pham/.zprofile && \
   eval "$(/opt/homebrew/bin/brew shellenv)"
-
-# change default shell
-chsh -s $(which zsh)
 
 # generate ssh key, start ssh-agent, add key to agent, copy to clipboard
 ssh-keygen -t ed25519 -C "austinpham77@gmail.com" && \
@@ -31,9 +27,8 @@ Save ssh key to [GitHub](https://github.com/settings/keys) then...
 
 ```shell
 git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
-  cd ~/.dotfiles && git config --global user.name aphamm && \
-  git config --global user.email austinpham77@gmail.com && \
-  ~/.dotfiles/init.sh
+  cd ~/.dotfiles && \
+  ./init.sh
 ```
 
 # Manual Configs 🤮
@@ -43,12 +38,39 @@ git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
 - Retreive documents from SSD (`Pham`)
 
 - System Preferences
-  - Keyboard > Keyboard Shortcuts >
-    - Remove Mission Control
-    - Remove Spotlight
-    - Save Picture of selected area as file: Shift Command 3
-    - Copy picture of selected area to clipboard: Shift Command 4
-  - Desktop & Dock > Default web browser > Arc
+  - Notifications > Turn off All
+  - Sound >
+    - Play sound on startup > Off
+  - Appearance >
+    - Show scroll bars > Always
+  - Control Center >
+    - Wi-Fi > Show in Menu Bar
+    - Accessibility Shortcuts > Show in Control Center
+    - Music Recognition > Show in Control Center
+    - Menu Bar Only >
+      - Spotlight > Don't Show in Menu Bar
+    - Automatically hide and show the menu bar > Always
+  - Siri & Spotlight > Ask Siri > Off
+  - Desktop & Dock >
+    - Automatically hide and show the Dock > On
+    - Show suggested and recent apps in Dock > Off
+    - Default web browser > Arc
+  - Battery >
+    - Low Power Mode > Always
+    - Options > Optimize video streaming while on battery > On
+  - Keyboard >
+    - Turn keyboard backlight off after inactivity > After 1 Minute
+    - Keyboard Shortcuts >
+      - Screenshots >
+        - Save picture of screen as a file > Off
+        - Copy picture of screen to the clipboard > Off
+        - Save picture of selected area as file > Shift Command 3
+        - Copy picture of selected area to clipboard > Shift Command 4
+      - Spotlight >
+        - Show Spotlight search > Off
+  - Trackpad >
+    - Tracking speed > 6/10
+    - Click > Light
 
 - [Route system sounds to Apollo Virtual Channels](https://www.youtube.com/watch?v=9K3D7kNb5DI): Audio MIDI Setup > Universal Audio Thunderbolt > Output > Configure Speakers > Apply > Done
 
