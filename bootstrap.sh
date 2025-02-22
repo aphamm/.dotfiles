@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
 
-# brew bundle dump --force --describe --file=~/.dotfiles/Brewfile
+git config --global user.name aphamm
+git config --global user.email austinpham77@gmail.com
+
+# brew bundle dump --force --describe
 brew update
 brew upgrade
 brew bundle --file=~/.dotfiles/Brewfile
-brew pin python@3.12
 brew cleanup
 
 # https://github.com/mathiasbynens/dotfiles/blob/main/bootstrap.sh
@@ -36,6 +38,9 @@ else
 	fi;
 fi;
 unset doIt;
+
+# install uv
+curl -LsSf https://astral.sh/uv/install.sh | sh
 
 # schedule reboot
 sudo pmset repeat restart MTWRFS  05:00:00

@@ -38,6 +38,18 @@ git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
 - Retreive documents from SSD (`Pham`)
 
 - System Preferences
+  - Appearance
+    - Appearance > Dark
+    - Show scroll bars > WHen scrolling
+  - Desktop & Dock
+    - Automatically hide and show the Dock > On
+    - Animate opening applications > Off
+    Show indicators for open applications > On
+  - Displays
+    - Automatically adjust brightness > On
+    - True Tone > On
+    - Preset > Apple Display (P3-500 nits)
+    - Refresh rate > ProMotion
   - Notifications > Turn off All
   - Sound >
     - Play sound on startup > Off

@@ -2,26 +2,18 @@
 tap "homebrew/bundle"
 tap "buo/cask-upgrade"
 brew "mas"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.12"
 # Kubernetes command-line interface
 brew "kubernetes-cli"
 # Platform built on V8 to build network applications
 brew "node"
-# Software environment for statistical computing
-brew "r"
 # Cross-shell prompt for astronauts
 brew "starship"
 # Terminal multiplexer
 brew "tmux"
-# Extremely fast Python package installer and resolver, written in Rust
-brew "uv"
 # Fish-like fast/unobtrusive autosuggestions for zsh
 brew "zsh-autosuggestions"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
-# Chromium based browser
-cask "arc"
 # App to build and share containerised applications and microservices
 cask "docker"
 # Free monospaced font with programming ligatures
@@ -32,6 +24,8 @@ cask "font-jetbrains-mono-nerd-font"
 cask "ilok-license-manager"
 # Control your tools with a few keystrokes
 cask "raycast"
+# Block your own access to distracting websites
+cask "selfcontrol"
 # Audio Effects Plugins
 cask "soundtoys"
 # Download manager for Spitfire audio libraries
