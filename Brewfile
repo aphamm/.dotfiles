@@ -1,7 +1,6 @@
 # https://gist.github.com/ChristopherA/a579274536aab36ea9966f301ff14f3f
 tap "homebrew/bundle"
 tap "buo/cask-upgrade"
-brew "mas"
 # Kubernetes command-line interface
 brew "kubernetes-cli"
 # Platform built on V8 to build network applications

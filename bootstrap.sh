@@ -44,3 +44,11 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 # schedule reboot
 sudo pmset repeat restart MTWRFS  05:00:00
+
+# download Node.js and pnpm 
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+
+\. "$HOME/.nvm/nvm.sh"
+
+nvm install 22
+corepack enable pnpm
