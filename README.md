@@ -37,52 +37,29 @@ git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
 - Retreive documents from SSD (`Pham`)
 
 - System Preferences
+  - Battery >
+    - Low Power Mode > Always
+    - Options > Optimize video streaming while on battery > On
   - Appearance
     - Appearance > Dark
-    - Show scroll bars > WHen scrolling
-  - Desktop & Dock
-    - Automatically hide and show the Dock > On
-    - Animate opening applications > Off
-    Show indicators for open applications > On
-  - Displays
-    - Automatically adjust brightness > On
-    - True Tone > On
-    - Preset > Apple Display (P3-500 nits)
-    - Refresh rate > ProMotion
-  - Notifications > Turn off All
-  - Sound >
-    - Play sound on startup > Off
-  - Appearance >
-    - Show scroll bars > Always
-  - Control Center >
-    - Wi-Fi > Show in Menu Bar
+  - Control Center
     - Accessibility Shortcuts > Show in Control Center
     - Music Recognition > Show in Control Center
     - Menu Bar Only >
       - Spotlight > Don't Show in Menu Bar
-    - Automatically hide and show the menu bar > Always
-  - Siri & Spotlight > Ask Siri > Off
-  - Desktop & Dock >
-    - Automatically hide and show the Dock > On
-    - Show suggested and recent apps in Dock > Off
-    - Default web browser > Arc
-  - Battery >
-    - Low Power Mode > Always
-    - Options > Optimize video streaming while on battery > On
+  - Displays
+    - Preset > Apple Display (P3-500 nits)
+  - Notifications > Turn off All
+    - Allow notifications when the screen is locked > Off
   - Keyboard >
-    - Turn keyboard backlight off after inactivity > After 1 Minute
     - Keyboard Shortcuts >
-      - Screenshots >
+      - Screenshots > 
         - Save picture of screen as a file > Off
         - Copy picture of screen to the clipboard > Off
         - Save picture of selected area as file > Shift Command 3
         - Copy picture of selected area to clipboard > Shift Command 4
       - Spotlight >
         - Show Spotlight search > Off
-  - Trackpad >
-    - Tracking speed > 6/10
-    - Click > Light
-
 - [Route system sounds to Apollo Virtual Channels](https://www.youtube.com/watch?v=9K3D7kNb5DI): Audio MIDI Setup > Universal Audio Thunderbolt > Output > Configure Speakers > Apply > Done
 
 ## Audio Software
