@@ -27,8 +27,7 @@ Save ssh key to [GitHub](https://github.com/settings/keys) then...
 
 ```shell
 git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
-  cd ~/.dotfiles && \
-  ./init.sh
+  ~/.dotfiles/bootstrap.sh
 ```
 
 # Manual Configs 🤮
