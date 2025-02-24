@@ -1,29 +1,53 @@
 #!/usr/bin/env bash
 
-git config --global user.name aphamm
-git config --global user.email austinpham77@gmail.com
-
-# brew bundle dump --force --describe
-brew update
-brew upgrade
-brew bundle --file=~/.dotfiles/Brewfile
-brew cleanup
-
-# https://github.com/mathiasbynens/dotfiles/blob/main/bootstrap.sh
+# Navigate to current file directory
 cd "$(dirname "${BASH_SOURCE}")";
-
 git pull origin main;
 
+# Install brew packages
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Use latest homebrew
+brew update 
+
+# Upgrdae already-installed formulae
+brew upgrade 
+
+# Install via Brewflie
+brew bundle --file=./Brewfile
+
+# Rmove outdated versions from cellar
+brew cleanup 
+
+# Install uv (Python package manager)
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Add $HOME/.local/bin to your PATH
+source $HOME/.local/bin/env
+
+# Download and install nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+
+# In lieu of restarting the shell
+\. "$HOME/.nvm/nvm.sh"
+
+# Download and install Node.js
+nvm install 22
+
+# Download and install pnpm
+npm install --global corepack@latest
+corepack enable pnpm
+
+# Copy vs code settings
+cp ./settings.json ~/Library/Application\ Support/Code/User/settings.json
+
+# Copy relevant configuration files
+# https://github.com/mathiasbynens/dotfiles/blob/main/bootstrap.sh
 function doIt() {
-	rsync --exclude ".git/" \
-		--exclude ".gitignore/" \
-		--exclude ".DS_Store" \
-		--exclude ".osx" \
-		--exclude "bootstrap.sh" \
-		--exclude "README.md" \
-		--exclude "Brewfile" \
-		--exclude "pham.rayconfig" \
-		--exclude "settings.json" \
+	rsync --include ".starship.toml" \
+		--include ".zprofile" \
+		--include ".zshrc" \
+		--exclude "*" \
 		-avh --no-perms . ~;
 	source ~/.zprofile;
 }
@@ -39,16 +63,4 @@ else
 fi;
 unset doIt;
 
-# install uv
-curl -LsSf https://astral.sh/uv/install.sh | sh
-
-# schedule reboot
-sudo pmset repeat restart MTWRFS  05:00:00
-
-# download Node.js and pnpm 
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
-
-\. "$HOME/.nvm/nvm.sh"
-
-nvm install 22
-corepack enable pnpm
+source ./config.sh
