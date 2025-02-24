@@ -16,6 +16,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Import saved plists
 defaults import com.apple.Terminal ./terminal.plist
+defaults import com.apple.symbolichotkeys ./symbolichotkeys.plist
 
 # Git credentials
 git config --global user.name aphamm
@@ -114,7 +115,13 @@ defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool false
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 
 # Increase sound quality for Bluetooth headphones/headsets
-defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
+defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Max (editable)" 80
+defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" 80
+defaults write com.apple.BluetoothAudioAgent "Apple Initial Bitpool (editable)" 80
+defaults write com.apple.BluetoothAudioAgent "Apple Initial Bitpool Min (editable)" 80
+defaults write com.apple.BluetoothAudioAgent "Negotiated Bitpool" 80
+defaults write com.apple.BluetoothAudioAgent "Negotiated Bitpool Max" 80
+defaults write com.apple.BluetoothAudioAgent "Negotiated Bitpool Min" 80
 
 # Enable full keyboard access for all controls
 # (e.g. enable Tab in modal dialogs)

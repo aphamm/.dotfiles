@@ -14,8 +14,9 @@ function doIt() {
     # Save VS Code settings
     cp ~/Library/Application\ Support/Code/User/settings.json ./settings.json 
 
-    # Save terminal settings
+    # Save plist settings
     defaults export com.apple.Terminal ./terminal.plist
+    defaults export com.apple.symbolichotkeys ./symbolichotkeys.plist
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
