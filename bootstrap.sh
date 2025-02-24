@@ -38,7 +38,7 @@ nvm install 22
 npm install --global corepack@latest
 corepack enable pnpm
 
-# Copy vs code settings
+# Copy VS code settings
 cp ./settings.json ~/Library/Application\ Support/Code/User/settings.json
 
 # Copy relevant configuration files

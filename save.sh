@@ -2,12 +2,29 @@
 cd "$(dirname "${BASH_SOURCE}")";
 git pull origin main;
 
-# Save brew file
-brew bundle dump --describe --file=./Brewfile
+function doIt() {
+	# Save brew file
+    brew bundle dump --describe --file=./Brewfile
 
-# Save VSCode settings
+    # Save relevant config files
+    cp ~/.starship.toml ./.starship.toml 
+    cp ~/.zprofile ./.zprofile
+    cp ~/.zshrc ./.zshrc
 
-cp ~/Library/Application\ Support/Code/User/settings.json ./settings.json 
+    # Save VS Code settings
+    cp ~/Library/Application\ Support/Code/User/settings.json ./settings.json 
 
-# Save terminal settings
-defaults export com.apple.Terminal ./terminal.plist
+    # Save terminal settings
+    defaults export com.apple.Terminal ./terminal.plist
+}
+
+if [ "$1" == "--force" -o "$1" == "-f" ]; then
+	doIt;
+else
+	read -p "This may overwrite existing files in your dotfiles directory. Are you sure? (y/n) " -n 1;
+	echo "";
+	if [[ $REPLY =~ ^[Yy]$ ]]; then
+		doIt;
+	fi;
+fi;
+unset doIt;
