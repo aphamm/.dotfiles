@@ -60,6 +60,16 @@ git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
         - Copy picture of selected area to clipboard > Shift Command 4
       - Spotlight >
         - Show Spotlight search > Off
+- Safari Settings
+  - General >
+    - Remove history items > After one month
+  - Tab >
+    - Tab layout > Compact
+  - Advanced >
+    - Accessibility >
+      - Never use font sizes smaller than > 14
+      - Press Tab o highlight each item on a webpage > On
+    - Show features for web developers > On
 - [Route system sounds to Apollo Virtual Channels](https://www.youtube.com/watch?v=9K3D7kNb5DI): Audio MIDI Setup > Universal Audio Thunderbolt > Output > Configure Speakers > Apply > Done
 
 ## Audio Software
