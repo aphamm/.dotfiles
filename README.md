@@ -49,6 +49,9 @@ git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
       - Spotlight > Don't Show in Menu Bar
   - Displays
     - Preset > Apple Display (P3-500 nits)
+    - Night Shift > 
+      - Schedule > Sunset to Sunrise
+      - Color temperature > More Warm
   - Notifications > Turn off All
     - Allow notifications when the screen is locked > Off
   - Keyboard >
