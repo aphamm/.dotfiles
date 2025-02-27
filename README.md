@@ -32,9 +32,9 @@ git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
 
 # Manual Configs 🤮
 
-- Import `rayconfig` settings with password `austinpham`
+- Retrieve documents from SSD (`Pham`)
 
-- Retreive documents from SSD (`Pham`)
+- Import `rayconfig` settings with password `austinpham`
 
 - System Preferences
   - Battery >
@@ -54,6 +54,8 @@ git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
       - Color temperature > More Warm
   - Notifications > Turn off All
     - Allow notifications when the screen is locked > Off
+  - Screen Time >
+    - Share across devices > On
   - Keyboard >
     - Keyboard Shortcuts >
       - Screenshots > 
@@ -63,8 +65,9 @@ git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
         - Copy picture of selected area to clipboard > Shift Command 4
       - Spotlight >
         - Show Spotlight search > Off
-- Safari Settings
-  - General >
+
+- Safari
+  - General > 
     - Remove history items > After one month
   - Tab >
     - Tab layout > Compact
@@ -73,9 +76,10 @@ git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
       - Never use font sizes smaller than > 14
       - Press Tab o highlight each item on a webpage > On
     - Show features for web developers > On
-- [Route system sounds to Apollo Virtual Channels](https://www.youtube.com/watch?v=9K3D7kNb5DI): Audio MIDI Setup > Universal Audio Thunderbolt > Output > Configure Speakers > Apply > Done
 
-## Audio Software
+## Audio Production
+
+- [Route system sounds to Apollo Virtual Channels](https://www.youtube.com/watch?v=9K3D7kNb5DI): Audio MIDI Setup > Universal Audio Thunderbolt > Output > Configure Speakers > Apply > Done
 
 - [UAD Software](https://help.uaudio.com/hc/en-us/articles/360057137692-Apple-Silicon-M1-M2-Compatibility-Info?_gl=1*1qpuawn*_ga*MTYzMjUzNzU0Ny4xNjgwMDI1NTUz*_ga_CPJ5176QFT*MTY4MDAyNTU2NC4xLjEuMTY4MDAyNTkwNy4wLjAuMA..)
 
@@ -86,5 +90,13 @@ git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
 - Cracked: fabfilter, valhalla
 
 # Factory Reset
+
+```shell 
+cd ~/.dotfiles && ./save.sh
+```
+
+- Save documents to SSD (`Pham`)
+
+- Export `rayconfig` settings
 
 - [System Settings](https://support.apple.com/en-us/102664) > General > Transfer or Reset > Erase All Content and Settings
