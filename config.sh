@@ -14,10 +14,6 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until `.macos` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-# Import saved plists
-defaults import com.apple.Terminal ./terminal.plist
-defaults import com.apple.symbolichotkeys ./symbolichotkeys.plist
-
 # Git credentials
 git config --global user.name aphamm
 git config --global user.email austinpham77@gmail.com

@@ -7,16 +7,12 @@ function doIt() {
     brew bundle dump --describe --file=./Brewfile
 
     # Save relevant config files
-    cp ~/.starship.toml ./.starship.toml 
+    cp ~/.starship.toml ./.starship.toml
     cp ~/.zprofile ./.zprofile
     cp ~/.zshrc ./.zshrc
 
     # Save VS Code settings
-    cp ~/Library/Application\ Support/Code/User/settings.json ./settings.json 
-
-    # Save plist settings
-    defaults export com.apple.Terminal ./terminal.plist
-    defaults export com.apple.symbolichotkeys ./symbolichotkeys.plist
+    cp ~/Library/Application\ Support/Code/User/settings.json ./settings.json
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then

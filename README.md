@@ -37,6 +37,7 @@ git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
 - Import `rayconfig` settings with password `austinpham`
 
 - System Preferences
+
   - Battery >
     - Low Power Mode > Always
     - Options > Optimize video streaming while on battery > On
@@ -49,7 +50,7 @@ git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
       - Spotlight > Don't Show in Menu Bar
   - Displays
     - Preset > Apple Display (P3-500 nits)
-    - Night Shift > 
+    - Night Shift >
       - Schedule > Sunset to Sunrise
       - Color temperature > More Warm
   - Notifications > Turn off All
@@ -58,7 +59,7 @@ git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
     - Share across devices > On
   - Keyboard >
     - Keyboard Shortcuts >
-      - Screenshots > 
+      - Screenshots >
         - Save picture of screen as a file > Off
         - Copy picture of screen to the clipboard > Off
         - Save picture of selected area as file > Shift Command 3
@@ -67,7 +68,7 @@ git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
         - Show Spotlight search > Off
 
 - Safari
-  - General > 
+  - General >
     - Remove history items > After one month
   - Tab >
     - Tab layout > Compact
@@ -91,7 +92,7 @@ git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
 
 # Factory Reset
 
-```shell 
+```shell
 cd ~/.dotfiles && ./save.sh
 ```
 

@@ -8,16 +8,16 @@ git pull origin main;
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Use latest homebrew
-brew update 
+brew update
 
-# Upgrdae already-installed formulae
-brew upgrade 
+# Upgrade already-installed formulae
+brew upgrade
 
 # Install via Brewflie
 brew bundle --file=./Brewfile
 
-# Rmove outdated versions from cellar
-brew cleanup 
+# Remove outdated versions from cellar
+brew cleanup
 
 # Install uv (Python package manager)
 curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -37,6 +37,9 @@ nvm install 22
 # Download and install pnpm
 npm install --global corepack@latest
 corepack enable pnpm
+
+# Install Rustup tool, which installs Rust
+curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
 
 # Copy VS code settings
 cp ./settings.json ~/Library/Application\ Support/Code/User/settings.json
