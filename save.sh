@@ -13,6 +13,7 @@ function doIt() {
 
     # Save VS Code settings
     cp ~/Library/Application\ Support/Code/User/settings.json ./settings.json
+    cp ~/Library/Application\ Support/Code/User/keybindings.json ./keybindings.json
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then

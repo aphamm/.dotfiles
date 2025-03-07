@@ -43,6 +43,7 @@ curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
 
 # Copy VS code settings
 cp ./settings.json ~/Library/Application\ Support/Code/User/settings.json
+cp ./keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
 
 # Copy relevant configuration files
 # https://github.com/mathiasbynens/dotfiles/blob/main/bootstrap.sh
