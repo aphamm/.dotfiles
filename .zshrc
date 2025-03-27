@@ -46,3 +46,5 @@ uv_init() {
 }
 
 clear
+
+. "$HOME/.local/bin/env"

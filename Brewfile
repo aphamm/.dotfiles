@@ -1,12 +1,10 @@
-# https://gist.github.com/ChristopherA/a579274536aab36ea9966f301ff14f3f
-tap "homebrew/bundle"
 tap "buo/cask-upgrade"
 # Kubernetes command-line interface
 brew "kubernetes-cli"
-# Atlas CLI enables you to manage your MongoDB Atlas
-brew "mongodb-atlas-cli"
 # Platform built on V8 to build network applications
 brew "node"
+# Adds an OCR text layer to scanned PDF files
+brew "ocrmypdf"
 # Cross-shell prompt for astronauts
 brew "starship"
 # Terminal multiplexer
@@ -15,33 +13,40 @@ brew "tmux"
 brew "zsh-autosuggestions"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
+# Sound and music editor
+cask "ableton-live-suite"
 # App to build and share containerised applications and microservices
 cask "docker"
-# Free monospaced font with programming ligatures
-cask "font-fira-code"
-# Developer targeted fonts with a high number of glyphs
-cask "font-jetbrains-mono-nerd-font"
+cask "font-geist"
+# Terminal emulator that uses platform-native UI and GPU acceleration
+cask "ghostty"
 # Software for iLok devices
 cask "ilok-license-manager"
+# System monitor with temperature & fans plugins
+cask "menubar-stats"
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
 # Control your tools with a few keystrokes
 cask "raycast"
-# Block your own access to distracting websites
-cask "selfcontrol"
 # Audio Effects Plugins
 cask "soundtoys"
 # Download manager for Spitfire audio libraries
 cask "spitfire-audio"
+# Cloud-based music creation and collaboration platform
+cask "splice"
 # Music streaming service
 cask "spotify"
 # Open-source code editor
 cask "visual-studio-code"
-# VS Code extensions
+# Gecko based web browser
+cask "zen-browser"
 vscode "charliermarsh.ruff"
+vscode "davidanson.vscode-markdownlint"
 vscode "donjayamanne.vscode-default-python-kernel"
+vscode "dsznajder.es7-react-js-snippets"
 vscode "esbenp.prettier-vscode"
-vscode "golang.go"
-vscode "mechatroner.rainbow-csv"
-vscode "meteorstudio.cursorcode"
+vscode "github.copilot"
+vscode "github.copilot-chat"
 vscode "ms-azuretools.vscode-docker"
 vscode "ms-python.debugpy"
 vscode "ms-python.python"
@@ -53,18 +58,11 @@ vscode "ms-toolsai.jupyter-renderers"
 vscode "ms-toolsai.vscode-jupyter-cell-tags"
 vscode "ms-toolsai.vscode-jupyter-powertoys"
 vscode "ms-toolsai.vscode-jupyter-slideshow"
-vscode "ms-vscode-remote.remote-containers"
 vscode "ms-vscode-remote.remote-ssh"
 vscode "ms-vscode-remote.remote-ssh-edit"
-vscode "ms-vscode.cmake-tools"
-vscode "ms-vscode.cpptools"
-vscode "ms-vscode.cpptools-extension-pack"
-vscode "ms-vscode.cpptools-themes"
-vscode "ms-vscode.makefile-tools"
 vscode "ms-vscode.remote-explorer"
-vscode "svelte.svelte-vscode"
-vscode "tal7aouy.theme"
-vscode "tamasfe.even-better-toml"
-vscode "tomoki1207.pdf"
-vscode "twxs.cmake"
-vscode "vscode-icons-team.vscode-icons"
+vscode "pkief.material-icon-theme"
+vscode "raunofreiberg.vesper"
+vscode "rust-lang.rust-analyzer"
+vscode "saoudrizwan.claude-dev"
+vscode "subframe7536.custom-ui-style"

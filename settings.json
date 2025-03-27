@@ -1,44 +1,240 @@
 {
-    "workbench.sideBar.location": "right",
-    "workbench.statusBar.visible": false,
-    "workbench.colorTheme": "Theme Darker",
-    "workbench.startupEditor": "none",
-    "workbench.iconTheme": "vscode-icons",
+  // BASICS
+  // hide sidebar with file, version control, extensions icons
+  "workbench.activityBar.location": "hidden",
+  // hide tab names at the top of file
+  "workbench.editor.showTabs": "single",
+  // hide status bar at the bottom
+  "workbench.statusBar.visible": false,
+  // show nothing when no editor is opened
+  "workbench.startupEditor": "none",
+  // hide minified view of code on right side
+  "editor.minimap.enabled": false,
+  // hide file path at the top of editor
+  "breadcrumbs.enabled": false,
+  // ignore extension recommendations
+  "extensions.ignoreRecommendations": true,
 
-    "editor.fontFamily": "Fira Code",
-    "editor.minimap.enabled": false,
-    "editor.scrollbar.horizontal": "hidden",
-    "editor.scrollbar.vertical": "hidden",
-    "editor.fontLigatures": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.cursorBlinking": "phase",
-    "editor.cursorSmoothCaretAnimation": "on",
-    "editor.cursorStyle": "block-outline",
-    "editor.rulers": [120],
-    "editor.wordWrap": "wordWrapColumn",
-    "editor.accessibilitySupport": "off",
+  // THEMES
+  // set custom theme + font
+  "workbench.colorTheme": "Vesper",
+  "custom-ui-style.font.sansSerif": "Geist Font",
+  "editor.fontFamily": "Geist Font",
+  // set zoom level
+  "window.zoomLevel": 0.6,
 
-    "[python]": {
-        "editor.formatOnSave": true,
-        "editor.codeActionsOnSave": {
-            "source.fixAll": "explicit",
-            "source.organizeImports": "explicit"
-        },
-        "editor.defaultFormatter": "charliermarsh.ruff"
-      },
+  // SIDEBAR
+  // custom icons for files and folders
+  "workbench.iconTheme": "material-icon-theme",
+  // hide directory arrow icons
+  "material-icon-theme.hidesExplorerArrows": true,
+  // does not fix top level folders at top when scrolling in explorer
+  "workbench.tree.enableStickyScroll": false,
+  // hides folder indentation lines
+  "workbench.tree.renderIndentGuides": "none",
+  // set spacing for nesting levels
+  "workbench.tree.indent": 16,
+  // does not compress empty directories
+  "explorer.compactFolders": false,
+  // removes need to confirm moving files around in GUI
+  "explorer.confirmDragAndDrop": false,
+  // removes need to confirm deleting files in GUI
+  "explorer.confirmDelete": false,
+  // hides error indicator on the right side of files in explorer
+  "explorer.decorations.badges": false,
 
-    "notebook.formatOnSave.enabled": true,
-    "notebook.codeActionsOnSave": {
-        "notebook.source.fixAll": "explicit",
-        "notebook.source.organizeImports": "explicit"
+  // TITLE BAR
+  // remove title bar at top
+  "window.customTitleBarVisibility": "never",
+  "window.titleBarStyle": "native",
+  "custom-ui-style.electron": {
+    "titleBarStyle": "hiddenInset",
+    // complete hide traffic light icons in top right
+    "trafficLightPosition": {
+      "x": -25,
+      "y": -25
+    }
+  },
+  "custom-ui-style.stylesheet": {
+    // remove shadow of notification box in bottom right
+    ".notification-toast": "box-shadow: none !important",
+    // change background color of title of search when pressing slash
+    ".quick-input-titlebar": "background: #100B15 !important",
+    // remove shadow of find widget and round corners
+    ".editor-widget.find-widget": "box-shadow: none; border-radius: 4px",
+    // apply color gradient to cursor
+    ".monaco-editor .cursors-layer .cursor": "background-image: linear-gradient(135deg, #ffaffc 10%, #DA70D6 100%)",
+
+    // COMMAND PALETTE
+    // remove shadow of command palette box
+    ".quick-input-widget.show-file-icons": "box-shadow: none !important",
+    // move command palette closer to center
+    ".quick-input-widget": "top: 25vh !important",
+    // hide scroll bar within command palette
+    ".quick-input-list .scrollbar": "display: none",
+    // remove empty blank space on the right of the command palette search bar
+    ".monaco-action-bar.quick-input-inline-action-bar": "display: none",
+
+    // TITLE BAR IN EDITOR
+    // remove border at bottom of title bar in editor
+    ".monaco-workbench .part.editor > .content .editor-group-container > .title.title-border-bottom:after": "display: none",
+    // remove shadow of title bar in editor
+    ".monaco-editor .scroll-decoration": "display: none",
+    // remove editor dropdown toolbar icon in top right
+    ".title-actions": "display: none !important",
+    // center text in title bar of editor
+    ".title.show-file-icons .label-container .monaco-icon-label.file-icon": "justify-content: center; padding: 0 !important",
+    // remove error counter in title bar of editor
+    ".title .monaco-icon-label:after": "margin-right: 0",
+
+    // SIDE BAR
+    // remove shadow of title in side bar
+    ".monaco-scrollable-element > .shadow.top": "display: none",
+    // remove title in side bar
+    ".sidebar .title-label": "display:none !important",
+    // remove side bar border
+    ".sidebar": "border: none !important",
+    // remove highlight outline for entire side bar
+    ".monaco-workbench .monaco-list:not(.element-focused):focus:before": "outline: none !important",
+    // remove highlight outline for individual items in side bar
+    ".monaco-list-row.focused": "outline: none !important"
+  },
+
+  // EDITOR
+  // set font size
+  "editor.fontSize": 14,
+  // enable ligatures
+  "editor.fontLigatures": true,
+  // set spacing between lines
+  "editor.lineHeight": 1.5,
+  // add multiple cursors via Command key on Mac
+  "editor.multiCursorModifier": "ctrlCmd",
+  // disable cursor blinking effect
+  "editor.cursorBlinking": "solid",
+  // set cursor style to block
+  "editor.cursorStyle": "block",
+  // does not fix top level function at top when scrolling in editor
+  "editor.stickyScroll.enabled": false,
+  // show relative line numbers (helpful for VIM)
+  "editor.lineNumbers": "relative",
+  // make font inside comments italic
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "comment",
+        "settings": {
+          "fontStyle": "italic"
+        }
+      }
+    ]
+  },
+
+  // EDITOR INDICATORS
+  // disable action buttons between lines (ie. debug button)
+  "editor.codeLens": false,
+  // disable parameter hints (use keyboard shortcut)
+  "editor.parameterHints.enabled": false,
+  // disable lightbulb suggestions (use keyboard shortcut)
+  "editor.lightbulb.enabled": "off",
+  // enable info blocks on hover
+  "editor.hover.enabled": true,
+  // show git diff indicators
+  "scm.diffDecorations": "all",
+  // hide icon for all foldable code blocks (use keyboard shortcuts)
+  "editor.showFoldingControls": "never",
+  // hide vertical lines to show indentation level
+  "editor.guides.indentation": false,
+  // hide dot icon for empty space
+  "editor.renderWhitespace": "none",
+  // hide highlighting for current line
+  "editor.renderLineHighlight": "none",
+  // hide horizontal scroll bars
+  "editor.scrollbar.horizontal": "hidden",
+  // hide vertical scroll bars
+  "editor.scrollbar.vertical": "hidden",
+  // disable border in overview ruler
+  "editor.overviewRulerBorder": false,
+  // hider cursor highlighter of current position in overview ruler
+  "editor.hideCursorInOverviewRuler": true,
+
+  // EDITOR SUGGESTIONS
+  // disable showing quick suggestions (use keyboard shortcuts)
+  "editor.quickSuggestions": {
+    "other": "on"
+  },
+  // disable showing quick suggestions on special characters like dot
+  "editor.suggestOnTriggerCharacters": true,
+  // enable tab complete without opening up suggestion list
+  "editor.tabCompletion": "on",
+  // put snippet suggestion at top of suggestion list
+  "editor.snippetSuggestions": "top",
+  // enable emmet completions / expansions in html files
+  "emmet.triggerExpansionOnTab": true,
+
+  // CUSTOM COLORS
+  "workbench.colorCustomizations": {
+    // change text color under cursor
+    "editorCursor.background": "#000000",
+    // hide all color indicators in overview ruler (use shortcuts to navigate errorss)
+    "editorOverviewRuler.wordHighlightStrongForeground": "#0000",
+    "editorOverviewRuler.selectionHighlightForeground": "#0000",
+    "editorOverviewRuler.rangeHighlightForeground": "#0000",
+    "editorOverviewRuler.wordHighlightForeground": "#0000",
+    "editorOverviewRuler.bracketMatchForeground": "#0000",
+    "editorOverviewRuler.findMatchForeground": "#302f2f00",
+    "editorOverviewRuler.modifiedForeground": "#0000",
+    "editorOverviewRuler.deletedForeground": "#0000",
+    "editorOverviewRuler.warningForeground": "#0000",
+    "editorOverviewRuler.addedForeground": "#0000",
+    "editorOverviewRuler.errorForeground": "#0000",
+    "editorOverviewRuler.infoForeground": "#0000",
+    "editorOverviewRuler.border": "#0000"
+  },
+
+  // FORMATTER
+  // trim trailing whitespace after saving file
+  "files.trimTrailingWhitespace": true,
+  // insert new line at end of file
+  "files.insertFinalNewline": true,
+  // set tab size to 2 spaces
+  "editor.tabSize": 2,
+  // disable auto indentation detection
+  "editor.detectIndentation": false,
+  // enable autosave of editor
+  "files.autoSave": "afterDelay",
+  // format code on save
+  "editor.formatOnSave": true,
+  // format line after type
+  "editor.formatOnType": true,
+  // set editor default formatter
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // python formatter settings
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.organizeImports": "explicit"
     },
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  // rust formatter settings
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+  },
+  // notebook formatter settings
+  "notebook.formatOnSave.enabled": true,
+  "notebook.codeActionsOnSave": {
+    "notebook.source.fixAll": "explicit",
+    "notebook.source.organizeImports": "explicit"
+  },
 
-    "files.autoSave": "onFocusChange",
-    "explorer.confirmDragAndDrop": false,
-    "terminal.integrated.shellIntegration.enabled": false,
-    "github.copilot.editor.enableAutoCompletions": true,
-    "accessibility.signalOptions.volume": 0,
-    "security.workspace.trust.untrustedFiles": "open",
-    "vsicons.dontShowNewVersionMessage": true
-
+  // INTEGRATED TERMINAL
+  "terminal.integrated.accessibleViewPreserveCursorPosition": true,
+  "terminal.integrated.customGlyphs": false,
+  "terminal.integrated.fontLigatures.enabled": true,
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.fontWeight": "100",
+  "terminal.integrated.fontWeightBold": "500",
+  "terminal.integrated.lineHeight": 1.05,
+  "terminal.integrated.fontFamily": "Geist Font"
 }

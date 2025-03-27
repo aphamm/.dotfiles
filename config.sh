@@ -152,8 +152,8 @@ defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 # Sleep                                                                       #
 ###############################################################################
 
-# Schedule daily reboot
-sudo pmset repeat restart MTWRFS  05:00:00
+# Schedule reboot every ~3 days
+sudo pmset repeat restart MR  03:00:00
 
 # Enable lid wakeup
 sudo pmset -a lidwake 1
@@ -206,16 +206,8 @@ defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 # Disable the warning before emptying the Trash
 defaults write com.apple.finder WarnOnEmptyTrash -bool false
 
-###############################################################################
-# Safari & WebKit                                                             #
-###############################################################################
-
-# Set up Safari for development.
-defaults write com.apple.Safari.SandboxBroker ShowDevelopMenu -bool true
-defaults write com.apple.Safari.plist IncludeDevelopMenu -bool true
-defaults write com.apple.Safari.plist WebKitDeveloperExtrasEnabledPreferenceKey -bool true
-defaults write com.apple.Safari.plist "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" -bool true
-defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+# Show icon in the title bar
+defaults write com.apple.universalaccess "showWindowTitlebarIcons" -bool "true" && killall Finder
 
 ###############################################################################
 # Terminal                                                                    #

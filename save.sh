@@ -4,14 +4,14 @@ git pull origin main;
 
 function doIt() {
 	# Save brew file
-    brew bundle dump --describe --file=./Brewfile
+    brew bundle dump --describe --file=./Brewfile2
 
     # Save relevant config files
     cp ~/.starship.toml ./.starship.toml
     cp ~/.zprofile ./.zprofile
     cp ~/.zshrc ./.zshrc
 
-    # Save VS Code settings
+    # Save VS code settings
     cp ~/Library/Application\ Support/Code/User/settings.json ./settings.json
     cp ~/Library/Application\ Support/Code/User/keybindings.json ./keybindings.json
 }
