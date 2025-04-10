@@ -12,10 +12,6 @@ softwareupdate -i -a
 rm /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress && \
 softwareupdate --install-rosetta --agree-to-license
 
-# install homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" && \
-  eval "$(/opt/homebrew/bin/brew shellenv)"
-
 # generate ssh key, start ssh-agent, add key to agent, copy to clipboard
 ssh-keygen -t ed25519 -C "austinpham77@gmail.com" && \
   eval "$(ssh-agent -s)" && \
@@ -39,22 +35,32 @@ git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
 - System Preferences
 
   - Battery >
-    - Low Power Mode > Always
     - Options > Optimize video streaming while on battery > On
-  - Appearance
-    - Appearance > Dark
-  - Control Center
+  - Control Center >
+    - Bluetooth > Show in Menu Bar
     - Accessibility Shortcuts > Show in Control Center
+    - Battery >
+      - Show Percentage > On
+      - Show Energy Mode > Always
     - Music Recognition > Show in Control Center
     - Menu Bar Only >
       - Spotlight > Don't Show in Menu Bar
-  - Displays
+      - Weather > Show in Menu Bar
+    - Automatically hide and show the menu bar > Never
+  - Displays >
+    - More Space
     - Preset > Apple Display (P3-500 nits)
     - Night Shift >
       - Schedule > Sunset to Sunrise
       - Color temperature > More Warm
+  - Apple Intelligence & Siri >
+    - Apple Intelligence > Off
+    - Siri > Off
+  - Spotlight > Turn off All
   - Notifications > Turn off All
     - Allow notifications when the screen is locked > Off
+  - Focus >
+    - Share across devices > On
   - Screen Time >
     - Share across devices > On
   - Keyboard >
@@ -67,19 +73,57 @@ git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
       - Spotlight >
         - Show Spotlight search > Off
 
+- Finder Settings
+
+  - General >
+    - Show these items on the desktop > None
+    - New Finder windows show > apham
+  - Sidebar >
+    - Favorites > AirDrop, Applications, Downloads, apham, files
+    - Locations > apham's MacBook Pro, External disks
+  - Advanced >
+    - Show warning before removing from iCloud Drive > Off
+
+- Zen Settings
+
+  - about:config >
+    - browser.tabs.allow_transparent_browser > true
+    - zen.theme.content-element-separation = 0
+
+- Menu Bar Stats
+  - General >
+    - Show MenuBar Stats automatically > At Login > On
+  - Appearance > Transparency > On
+  - Modules >
+    - Battery > Module status > Off
+    - Bluetooth > Module status > Off
+    - CPU >
+      - Module status > Standalone mode
+      - CPU displayed > Efficiency-Performance combined
+      - Show window graph > On
+    - Disk > Module status > Off
+    - GPU > Module status > Combined mode
+    - Memory >
+      - Module status > Standalone mode
+      - Show window graph > On
+
 ## Audio Production
 
-- Brew Install: [Ableton Suite 12](https://www.ableton.com/en/live/), [Splice (Serum & RC2)](https://splice.com/), [Soundtoys](https://www.soundtoys.com/), [SpitFire Audio](https://www.google.com/search?client=firefox-b-1-d&q=spitfire-audio), [iLok License Manger](https://www.ilok.com/#!license-manager)
-
-- Note: Only install Audio Unit for MacOS devices !!
-
-- [Route system sounds to Apollo Virtual Channels](https://www.youtube.com/watch?v=9K3D7kNb5DI): Audio MIDI Setup > Universal Audio Thunderbolt > Output > Configure Speakers > Apply > Done
+- Brew Install: [Ableton Suite 12](https://www.ableton.com/en/live/), [Splice (Serum 2 & RC2)](https://splice.com/), [Soundtoys](https://www.soundtoys.com/), [SpitFire Audio](https://www.google.com/search?client=firefox-b-1-d&q=spitfire-audio), [iLok License Manger](https://www.ilok.com/#!license-manager)
 
 - [UAD Software](https://help.uaudio.com/hc/en-us/articles/360057137692-Apple-Silicon-M1-M2-Compatibility-Info?_gl=1*1qpuawn*_ga*MTYzMjUzNzU0Ny4xNjgwMDI1NTUz*_ga_CPJ5176QFT*MTY4MDAyNTU2NC4xLjEuMTY4MDAyNTkwNy4wLjAuMA..)
 
 - [Soothe2](https://oeksound.com/downloads/)
 
-- Cracked: fabfilter, valhalla
+- [Route system sounds to Apollo Virtual Channels](https://www.youtube.com/watch?v=9K3D7kNb5DI): Audio MIDI Setup > Universal Audio Thunderbolt > Output > Configure Speakers > VIRTUAL 1/2 > Apply > Done
+
+- Cracked: Fabfilter, Valhalla
+
+- Note: Only install Audio Unit for MacOS devices !!
+
+- Ableton Settings
+  - Themes & Colors >
+    - Theme > Immaterial
 
 # Factory Reset
 

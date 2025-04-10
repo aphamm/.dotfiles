@@ -9,6 +9,8 @@ brew "ocrmypdf"
 brew "starship"
 # Terminal multiplexer
 brew "tmux"
+# Feature-rich command-line audio/video downloader
+brew "yt-dlp"
 # Fish-like fast/unobtrusive autosuggestions for zsh
 brew "zsh-autosuggestions"
 # Fish shell like syntax highlighting for zsh
@@ -18,6 +20,8 @@ cask "ableton-live-suite"
 # App to build and share containerised applications and microservices
 cask "docker"
 cask "font-geist"
+# App and website blocker
+cask "freedom"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
 # Software for iLok devices
@@ -42,6 +46,7 @@ cask "visual-studio-code"
 cask "zen-browser"
 vscode "charliermarsh.ruff"
 vscode "davidanson.vscode-markdownlint"
+vscode "docker.docker"
 vscode "donjayamanne.vscode-default-python-kernel"
 vscode "dsznajder.es7-react-js-snippets"
 vscode "esbenp.prettier-vscode"
