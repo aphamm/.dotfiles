@@ -1,4 +1,6 @@
 tap "buo/cask-upgrade"
+# GitHub command-line tool
+brew "gh"
 # Kubernetes command-line interface
 brew "kubernetes-cli"
 # Platform built on V8 to build network applications
@@ -20,18 +22,16 @@ cask "ableton-live-suite"
 # App to build and share containerised applications and microservices
 cask "docker"
 cask "font-geist"
-# App and website blocker
-cask "freedom"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
 # Software for iLok devices
 cask "ilok-license-manager"
-# System monitor with temperature & fans plugins
-cask "menubar-stats"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
 # Control your tools with a few keystrokes
 cask "raycast"
+# Block your own access to distracting websites
+cask "selfcontrol"
 # Audio Effects Plugins
 cask "soundtoys"
 # Download manager for Spitfire audio libraries
@@ -43,7 +43,7 @@ cask "spotify"
 # Open-source code editor
 cask "visual-studio-code"
 # Gecko based web browser
-cask "zen-browser"
+cask "zen"
 vscode "charliermarsh.ruff"
 vscode "davidanson.vscode-markdownlint"
 vscode "docker.docker"
@@ -71,3 +71,4 @@ vscode "raunofreiberg.vesper"
 vscode "rust-lang.rust-analyzer"
 vscode "saoudrizwan.claude-dev"
 vscode "subframe7536.custom-ui-style"
+vscode "supermaven.supermaven"

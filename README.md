@@ -1,4 +1,4 @@
-Here is my custom configuration for my MacBook Pro 2023 (M2 Pro) 😎
+Here is my custom configuration for my MacBook Air 2025 (M4) 😎
 
 # Automated Configs 👨‍💻
 
@@ -89,23 +89,11 @@ git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
   - about:config >
     - browser.tabs.allow_transparent_browser > true
     - zen.theme.content-element-separation = 0
+  - [Zen Internet](https://addons.mozilla.org/en-US/firefox/addon/zen-internet/)
 
-- Menu Bar Stats
-  - General >
-    - Show MenuBar Stats automatically > At Login > On
-  - Appearance > Transparency > On
-  - Modules >
-    - Battery > Module status > Off
-    - Bluetooth > Module status > Off
-    - CPU >
-      - Module status > Standalone mode
-      - CPU displayed > Efficiency-Performance combined
-      - Show window graph > On
-    - Disk > Module status > Off
-    - GPU > Module status > Combined mode
-    - Memory >
-      - Module status > Standalone mode
-      - Show window graph > On
+- SelfControl Settings
+
+  - [Add blocklist](https://www.refocusapp.co/articles/porn-sites-to-block)
 
 ## Audio Production
 

@@ -170,6 +170,7 @@
   "editor.snippetSuggestions": "top",
   // enable emmet completions / expansions in html files
   "emmet.triggerExpansionOnTab": true,
+  "editor.inlineSuggest.edits.showCollapsed": true, // EXPERIMENTAL
 
   // CUSTOM COLORS
   "workbench.colorCustomizations": {
@@ -226,6 +227,7 @@
     "notebook.source.fixAll": "explicit",
     "notebook.source.organizeImports": "explicit"
   },
+  "notebook.output.fontFamily": "Andale Mono", // EXPERIMENTAL
 
   // INTEGRATED TERMINAL
   "terminal.integrated.accessibleViewPreserveCursorPosition": true,
@@ -236,5 +238,9 @@
   "terminal.integrated.fontWeight": "100",
   "terminal.integrated.fontWeightBold": "500",
   "terminal.integrated.lineHeight": 1.05,
-  "terminal.integrated.fontFamily": "Geist Font"
+  "terminal.integrated.fontFamily": "Geist Font",
+
+  // OTHER
+  "git.autofetch": true, // EXPERIMENTAL
+  "supermaven.otherWarning": false // EXPERIMENTAL
 }

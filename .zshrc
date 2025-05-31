@@ -13,12 +13,12 @@ export NVM_DIR="$HOME/.nvm"
 # This loads nvm bash_completion
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
-# alias python='python3'
-# alias pip='pip3'
+alias python='python3'
+alias pip='pip3'
 alias act='source .venv/bin/activate'
 alias pin='uv pip install'
 
-uvinit() {
+uv_init() {
 
     if [ -z "$1" ]; then
         echo "Error: No Python <version> specified 😡"
@@ -77,6 +77,6 @@ uvinit() {
     return 0
 }
 
-. "$HOME/.local/bin/env"
-
 clear
+
+. "$HOME/.local/bin/env"

@@ -84,6 +84,9 @@ cp ./.zshrc ~
 source ~/.zprofile
 source ~/.zshrc
 
+# SelfControl settings
+defaults write org.eyebeam.SelfControl MaxBlockLength -int 132480
+
 # Copy Zen Profile files
 
 for profile_dir in /Users/apham/Library/Application\ Support/zen/Profiles/*; do
