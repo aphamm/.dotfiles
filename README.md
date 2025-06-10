@@ -45,8 +45,10 @@ git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
     - Music Recognition > Show in Control Center
     - Menu Bar Only >
       - Spotlight > Don't Show in Menu Bar
-      - Weather > Show in Menu Bar
     - Automatically hide and show the menu bar > Never
+  - Desktop & Dock >
+    - Show indicators for open applications > Off
+    - Show suggested and recent apps in Dock > Off
   - Displays >
     - More Space
     - Preset > Apple Display (P3-500 nits)
@@ -79,13 +81,17 @@ git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
     - Show these items on the desktop > None
     - New Finder windows show > apham
   - Sidebar >
-    - Favorites > AirDrop, Applications, Downloads, apham, files
+    - Favorites > AirDrop, Applications, Downloads, austin
     - Locations > apham's MacBook Pro, External disks
   - Advanced >
     - Show warning before removing from iCloud Drive > Off
 
 - Zen Settings
 
+  - Sync via Mozilla
+  - Keyboard Shortcuts
+    - Toggle Compact Mode > Command + B
+    - Show Bookmarks Sidebar > Not Set
   - about:config >
     - browser.tabs.allow_transparent_browser > true
     - zen.theme.content-element-separation = 0

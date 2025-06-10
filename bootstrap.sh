@@ -100,7 +100,6 @@ for profile_dir in /Users/apham/Library/Application\ Support/zen/Profiles/*; do
   fi
 
   cp "$HOME/.dotfiles/userChrome.css" "$chrome_dir"
-  cp "$HOME/.dotfiles/userContent.css" "$chrome_dir"
 
 done
 
