@@ -45,13 +45,13 @@ git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
     - Music Recognition > Show in Control Center
     - Menu Bar Only >
       - Spotlight > Don't Show in Menu Bar
-    - Automatically hide and show the menu bar > Never
+    - Automatically hide and show the menu bar > Always
   - Desktop & Dock >
     - Show indicators for open applications > Off
     - Show suggested and recent apps in Dock > Off
   - Displays >
     - More Space
-    - Preset > Apple Display (P3-500 nits)
+    - Automatically adjust brightness > Off
     - Night Shift >
       - Schedule > Sunset to Sunrise
       - Color temperature > More Warm
@@ -82,20 +82,20 @@ git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
     - New Finder windows show > apham
   - Sidebar >
     - Favorites > AirDrop, Applications, Downloads, austin
-    - Locations > apham's MacBook Pro, External disks
+    - Locations > apham's MacBook Air, External disks
   - Advanced >
+    - Show warning before changing an extension > Off
     - Show warning before removing from iCloud Drive > Off
 
 - Zen Settings
 
   - Sync via Mozilla
   - Keyboard Shortcuts
-    - Toggle Compact Mode > Command + B
-    - Show Bookmarks Sidebar > Not Set
+    - Toggle Compact Mode > Shift + Command + S
+    - Take Screenshot > Not Set
   - about:config >
-    - browser.tabs.allow_transparent_browser > true
+    - browser.tabs.allow_transparent_browser > false
     - zen.theme.content-element-separation = 0
-  - [Zen Internet](https://addons.mozilla.org/en-US/firefox/addon/zen-internet/)
 
 - SelfControl Settings
 
@@ -103,21 +103,28 @@ git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
 
 ## Audio Production
 
-- Brew Install: [Ableton Suite 12](https://www.ableton.com/en/live/), [Splice (Serum 2 & RC2)](https://splice.com/), [Soundtoys](https://www.soundtoys.com/), [SpitFire Audio](https://www.google.com/search?client=firefox-b-1-d&q=spitfire-audio), [iLok License Manger](https://www.ilok.com/#!license-manager)
+- Brew Install: [Ableton Suite 12](https://www.ableton.com/en/live/), [Soundtoys](https://www.soundtoys.com/), [iLok License Manger](https://www.ilok.com/#!license-manager)
 
 - [UAD Software](https://help.uaudio.com/hc/en-us/articles/360057137692-Apple-Silicon-M1-M2-Compatibility-Info?_gl=1*1qpuawn*_ga*MTYzMjUzNzU0Ny4xNjgwMDI1NTUz*_ga_CPJ5176QFT*MTY4MDAyNTU2NC4xLjEuMTY4MDAyNTkwNy4wLjAuMA..)
 
 - [Soothe2](https://oeksound.com/downloads/)
 
+- [Splice (Serum 2 & RC2)](https://splice.com/plugins/your-plugins)
+
+- [FabFilter](https://www.fabfilter.com/download)
+
+- [Valhalla](https://valhalladsp.com/my-account/downloads/)
+
+- [Spitfire](https://labs.spitfireaudio.com/download)
+
 - [Route system sounds to Apollo Virtual Channels](https://www.youtube.com/watch?v=9K3D7kNb5DI): Audio MIDI Setup > Universal Audio Thunderbolt > Output > Configure Speakers > VIRTUAL 1/2 > Apply > Done
-
-- Cracked: Fabfilter, Valhalla
-
-- Note: Only install Audio Unit for MacOS devices !!
 
 - Ableton Settings
   - Themes & Colors >
     - Theme > Immaterial
+  - Plug-Ins >
+    - Use Audio Units v2 / v3 > On
+    - Use VST2 / VST3 Plug-In > Off
 
 # Factory Reset
 

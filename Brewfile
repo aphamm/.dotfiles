@@ -5,14 +5,10 @@ brew "gh"
 brew "kubernetes-cli"
 # Platform built on V8 to build network applications
 brew "node"
-# Adds an OCR text layer to scanned PDF files
-brew "ocrmypdf"
 # Cross-shell prompt for astronauts
 brew "starship"
 # Terminal multiplexer
 brew "tmux"
-# Feature-rich command-line audio/video downloader
-brew "yt-dlp"
 # Fish-like fast/unobtrusive autosuggestions for zsh
 brew "zsh-autosuggestions"
 # Fish shell like syntax highlighting for zsh
@@ -20,7 +16,7 @@ brew "zsh-syntax-highlighting"
 # Sound and music editor
 cask "ableton-live-suite"
 # App to build and share containerised applications and microservices
-cask "docker"
+cask "docker-desktop"
 cask "font-geist"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
@@ -34,8 +30,6 @@ cask "raycast"
 cask "selfcontrol"
 # Audio Effects Plugins
 cask "soundtoys"
-# Download manager for Spitfire audio libraries
-cask "spitfire-audio"
 # Cloud-based music creation and collaboration platform
 cask "splice"
 # Music streaming service

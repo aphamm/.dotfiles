@@ -89,17 +89,14 @@ defaults write org.eyebeam.SelfControl MaxBlockLength -int 132480
 
 # Copy Zen Profile files
 
-for profile_dir in /Users/apham/Library/Application\ Support/zen/Profiles/*; do
+for profile_dir in ~/Library/Application\ Support/zen/Profiles/*; do
 
   chrome_dir="$profile_dir/chrome"
 
-  # Check if the chrome directory exists within the profile directory
-  if [[ ! -d "$chrome_dir" ]]; then
-    echo "Chrome directory '$chrome_dir' does not exist. Creating..."
-    mkdir -p "$chrome_dir"
+  # Copy userChrome.css if chrome directory exists
+  if [[ -d "$chrome_dir" ]]; then
+    cp "$HOME/.dotfiles/userChrome.css" "$chrome_dir/userChrome.css"
   fi
-
-  cp "$HOME/.dotfiles/userChrome.css" "$chrome_dir"
 
 done
 
