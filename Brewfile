@@ -1,33 +1,19 @@
 tap "buo/cask-upgrade"
 # GitHub command-line tool
 brew "gh"
-# Kubernetes command-line interface
-brew "kubernetes-cli"
 # Platform built on V8 to build network applications
 brew "node"
-# Cross-shell prompt for astronauts
-brew "starship"
 # Terminal multiplexer
 brew "tmux"
 # Fish-like fast/unobtrusive autosuggestions for zsh
 brew "zsh-autosuggestions"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
-# Sound and music editor
-cask "ableton-live-suite"
-# App to build and share containerised applications and microservices
-cask "docker-desktop"
 cask "font-geist"
-# Terminal emulator that uses platform-native UI and GPU acceleration
-cask "ghostty"
 # Software for iLok devices
 cask "ilok-license-manager"
-# Knowledge base that works on top of a local folder of plain text Markdown files
-cask "obsidian"
 # Control your tools with a few keystrokes
 cask "raycast"
-# Block your own access to distracting websites
-cask "selfcontrol"
 # Audio Effects Plugins
 cask "soundtoys"
 # Cloud-based music creation and collaboration platform
@@ -36,16 +22,12 @@ cask "splice"
 cask "spotify"
 # Open-source code editor
 cask "visual-studio-code"
-# Gecko based web browser
-cask "zen"
 vscode "charliermarsh.ruff"
 vscode "davidanson.vscode-markdownlint"
 vscode "docker.docker"
 vscode "donjayamanne.vscode-default-python-kernel"
 vscode "dsznajder.es7-react-js-snippets"
 vscode "esbenp.prettier-vscode"
-vscode "github.copilot"
-vscode "github.copilot-chat"
 vscode "ms-azuretools.vscode-docker"
 vscode "ms-python.debugpy"
 vscode "ms-python.python"
@@ -63,6 +45,4 @@ vscode "ms-vscode.remote-explorer"
 vscode "pkief.material-icon-theme"
 vscode "raunofreiberg.vesper"
 vscode "rust-lang.rust-analyzer"
-vscode "saoudrizwan.claude-dev"
 vscode "subframe7536.custom-ui-style"
-vscode "supermaven.supermaven"
