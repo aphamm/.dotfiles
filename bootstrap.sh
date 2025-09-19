@@ -70,35 +70,12 @@ curl https://sh.rustup.rs -sSf | sh -s -- -y
 
 # Copy VS code settings
 cp ./settings.json ~/Library/Application\ Support/Code/User/settings.json
-cp ./keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
-
-# Copy Ghostty settings
-cp ./ghostty_config $HOME/Library/Application\ Support/com.mitchellh.ghostty/config
-
-# Copy Starship settings
-cp ./.starship.toml ~
 
 # Copy Shell settings
 cp ./.zprofile ~
 cp ./.zshrc ~
 source ~/.zprofile
 source ~/.zshrc
-
-# SelfControl settings
-defaults write org.eyebeam.SelfControl MaxBlockLength -int 132480
-
-# Copy Zen Profile files
-
-for profile_dir in ~/Library/Application\ Support/zen/Profiles/*; do
-
-  chrome_dir="$profile_dir/chrome"
-
-  # Copy userChrome.css if chrome directory exists
-  if [[ -d "$chrome_dir" ]]; then
-    cp "$HOME/.dotfiles/userChrome.css" "$chrome_dir/userChrome.css"
-  fi
-
-done
 
 #####################################
 #          APPLE CONFIGS            #
