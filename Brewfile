@@ -12,10 +12,6 @@ cask "font-geist"
 cask "ilok-license-manager"
 # Control your tools with a few keystrokes
 cask "raycast"
-# Audio Effects Plugins
-cask "soundtoys"
-# Cloud-based music creation and collaboration platform
-cask "splice"
 # Music streaming service
 cask "spotify"
 # Open-source code editor
