@@ -1,9 +1,5 @@
 {
   // BASICS
-  // hide sidebar with file, version control, extensions icons
-  "workbench.activityBar.location": "hidden",
-  // hide tab names at the top of file
-  "workbench.editor.showTabs": "single",
   // hide status bar at the bottom
   "workbench.statusBar.visible": false,
   // show nothing when no editor is opened
@@ -14,24 +10,18 @@
   "breadcrumbs.enabled": false,
   // ignore extension recommendations
   "extensions.ignoreRecommendations": true,
-
-  // THEMES
   // set custom theme + font
   "workbench.colorTheme": "Vesper",
   "custom-ui-style.font.sansSerif": "Geist Font",
   "editor.fontFamily": "Geist Font",
   // set zoom level
-  "window.zoomLevel": 0.6,
+  "window.zoomLevel": 1,
 
   // SIDEBAR
   // custom icons for files and folders
   "workbench.iconTheme": "material-icon-theme",
   // hide directory arrow icons
   "material-icon-theme.hidesExplorerArrows": true,
-  // does not fix top level folders at top when scrolling in explorer
-  "workbench.tree.enableStickyScroll": false,
-  // hides folder indentation lines
-  "workbench.tree.renderIndentGuides": "none",
   // set spacing for nesting levels
   "workbench.tree.indent": 16,
   // does not compress empty directories
@@ -40,21 +30,8 @@
   "explorer.confirmDragAndDrop": false,
   // removes need to confirm deleting files in GUI
   "explorer.confirmDelete": false,
-  // hides error indicator on the right side of files in explorer
-  "explorer.decorations.badges": false,
 
   // TITLE BAR
-  // remove title bar at top
-  "window.customTitleBarVisibility": "never",
-  "window.titleBarStyle": "native",
-  "custom-ui-style.electron": {
-    "titleBarStyle": "hiddenInset",
-    // complete hide traffic light icons in top right
-    "trafficLightPosition": {
-      "x": -25,
-      "y": -25
-    }
-  },
   "custom-ui-style.stylesheet": {
     // remove shadow of notification box in bottom right
     ".notification-toast": "box-shadow: none !important",
@@ -109,12 +86,8 @@
   "editor.lineHeight": 1.5,
   // add multiple cursors via Command key on Mac
   "editor.multiCursorModifier": "ctrlCmd",
-  // disable cursor blinking effect
-  "editor.cursorBlinking": "solid",
   // set cursor style to block
   "editor.cursorStyle": "block",
-  // does not fix top level function at top when scrolling in editor
-  "editor.stickyScroll.enabled": false,
   // show relative line numbers (helpful for VIM)
   "editor.lineNumbers": "relative",
   // make font inside comments italic
@@ -127,69 +100,6 @@
         }
       }
     ]
-  },
-
-  // EDITOR INDICATORS
-  // disable action buttons between lines (ie. debug button)
-  "editor.codeLens": false,
-  // disable parameter hints (use keyboard shortcut)
-  "editor.parameterHints.enabled": false,
-  // disable lightbulb suggestions (use keyboard shortcut)
-  "editor.lightbulb.enabled": "off",
-  // enable info blocks on hover
-  "editor.hover.enabled": true,
-  // show git diff indicators
-  "scm.diffDecorations": "all",
-  // hide icon for all foldable code blocks (use keyboard shortcuts)
-  "editor.showFoldingControls": "never",
-  // hide vertical lines to show indentation level
-  "editor.guides.indentation": false,
-  // hide dot icon for empty space
-  "editor.renderWhitespace": "none",
-  // hide highlighting for current line
-  "editor.renderLineHighlight": "none",
-  // hide horizontal scroll bars
-  "editor.scrollbar.horizontal": "hidden",
-  // hide vertical scroll bars
-  "editor.scrollbar.vertical": "hidden",
-  // disable border in overview ruler
-  "editor.overviewRulerBorder": false,
-  // hider cursor highlighter of current position in overview ruler
-  "editor.hideCursorInOverviewRuler": true,
-
-  // EDITOR SUGGESTIONS
-  // disable showing quick suggestions (use keyboard shortcuts)
-  "editor.quickSuggestions": {
-    "other": "on"
-  },
-  // disable showing quick suggestions on special characters like dot
-  "editor.suggestOnTriggerCharacters": true,
-  // enable tab complete without opening up suggestion list
-  "editor.tabCompletion": "on",
-  // put snippet suggestion at top of suggestion list
-  "editor.snippetSuggestions": "top",
-  // enable emmet completions / expansions in html files
-  "emmet.triggerExpansionOnTab": true,
-  "editor.inlineSuggest.edits.showCollapsed": true, // EXPERIMENTAL
-
-  // CUSTOM COLORS
-  "workbench.colorCustomizations": {
-    // change text color under cursor
-    "editorCursor.background": "#000000",
-    // hide all color indicators in overview ruler (use shortcuts to navigate errorss)
-    "editorOverviewRuler.wordHighlightStrongForeground": "#0000",
-    "editorOverviewRuler.selectionHighlightForeground": "#0000",
-    "editorOverviewRuler.rangeHighlightForeground": "#0000",
-    "editorOverviewRuler.wordHighlightForeground": "#0000",
-    "editorOverviewRuler.bracketMatchForeground": "#0000",
-    "editorOverviewRuler.findMatchForeground": "#302f2f00",
-    "editorOverviewRuler.modifiedForeground": "#0000",
-    "editorOverviewRuler.deletedForeground": "#0000",
-    "editorOverviewRuler.warningForeground": "#0000",
-    "editorOverviewRuler.addedForeground": "#0000",
-    "editorOverviewRuler.errorForeground": "#0000",
-    "editorOverviewRuler.infoForeground": "#0000",
-    "editorOverviewRuler.border": "#0000"
   },
 
   // FORMATTER
@@ -227,20 +137,5 @@
     "notebook.source.fixAll": "explicit",
     "notebook.source.organizeImports": "explicit"
   },
-  "notebook.output.fontFamily": "Andale Mono", // EXPERIMENTAL
-
-  // INTEGRATED TERMINAL
-  "terminal.integrated.accessibleViewPreserveCursorPosition": true,
-  "terminal.integrated.customGlyphs": false,
-  "terminal.integrated.fontLigatures.enabled": true,
-  "terminal.integrated.fontSize": 14,
-  "terminal.integrated.defaultProfile.osx": "zsh",
-  "terminal.integrated.fontWeight": "100",
-  "terminal.integrated.fontWeightBold": "500",
-  "terminal.integrated.lineHeight": 1.05,
-  "terminal.integrated.fontFamily": "Geist Font",
-
-  // OTHER
-  "git.autofetch": true, // EXPERIMENTAL
-  "supermaven.otherWarning": false // EXPERIMENTAL
+  "notebook.output.fontFamily": "Andale Mono"
 }

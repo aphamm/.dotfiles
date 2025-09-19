@@ -3,8 +3,6 @@ tap "buo/cask-upgrade"
 brew "gh"
 # Platform built on V8 to build network applications
 brew "node"
-# Terminal multiplexer
-brew "tmux"
 # Fish-like fast/unobtrusive autosuggestions for zsh
 brew "zsh-autosuggestions"
 # Fish shell like syntax highlighting for zsh

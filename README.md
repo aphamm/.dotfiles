@@ -126,6 +126,11 @@ git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
     - Use Audio Units v2 / v3 > On
     - Use VST2 / VST3 Plug-In > Off
 
+# Physical Dotfiles
+
+- Technology
+  - MacBook Air 2025 (M4)
+
 # Factory Reset
 
 ```shell
