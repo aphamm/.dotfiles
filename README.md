@@ -36,8 +36,10 @@ git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
 
   - Battery >
     - Options > Optimize video streaming while on battery > On
+  - Apple Intelligence & Siri >
+    - Apple Intelligence > Off
+    - Siri > Off
   - Control Center >
-    - Bluetooth > Show in Menu Bar
     - Accessibility Shortcuts > Show in Control Center
     - Battery >
       - Show Percentage > On
@@ -45,19 +47,11 @@ git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
     - Music Recognition > Show in Control Center
     - Menu Bar Only >
       - Spotlight > Don't Show in Menu Bar
-    - Automatically hide and show the menu bar > Always
-  - Desktop & Dock >
-    - Show indicators for open applications > Off
-    - Show suggested and recent apps in Dock > Off
   - Displays >
-    - More Space
     - Automatically adjust brightness > Off
     - Night Shift >
-      - Schedule > Sunset to Sunrise
+      - Schedule > 6PM to 6AM
       - Color temperature > More Warm
-  - Apple Intelligence & Siri >
-    - Apple Intelligence > Off
-    - Siri > Off
   - Spotlight > Turn off All
   - Notifications > Turn off All
     - Allow notifications when the screen is locked > Off
@@ -84,28 +78,15 @@ git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
     - Favorites > AirDrop, Applications, Downloads, austin
     - Locations > apham's MacBook Air, External disks
   - Advanced >
-    - Show warning before changing an extension > Off
     - Show warning before removing from iCloud Drive > Off
-
-- Zen Settings
-
-  - Sync via Mozilla
-  - Keyboard Shortcuts
-    - Toggle Compact Mode > Shift + Command + S
-    - Take Screenshot > Not Set
-  - about:config >
-    - browser.tabs.allow_transparent_browser > false
-    - zen.theme.content-element-separation = 0
-
-- SelfControl Settings
-
-  - [Add blocklist](https://www.refocusapp.co/articles/porn-sites-to-block)
 
 ## Audio Production
 
-- Brew Install: [Ableton Suite 12](https://www.ableton.com/en/live/), [Soundtoys](https://www.soundtoys.com/), [iLok License Manger](https://www.ilok.com/#!license-manager)
-
+- Brew Install: [Ableton Suite 12](https://www.ableton.com/en/live/)
+- 
 - [UAD Software](https://help.uaudio.com/hc/en-us/articles/360057137692-Apple-Silicon-M1-M2-Compatibility-Info?_gl=1*1qpuawn*_ga*MTYzMjUzNzU0Ny4xNjgwMDI1NTUz*_ga_CPJ5176QFT*MTY4MDAyNTU2NC4xLjEuMTY4MDAyNTkwNy4wLjAuMA..)
+
+- [Soundtoys]([https://www.soundtoys.com/](https://accounts.soundtoys.com/#/licenses))
 
 - [Soothe2](https://oeksound.com/downloads/)
 
