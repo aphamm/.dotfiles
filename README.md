@@ -92,20 +92,20 @@ git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
 
 - [Splice (Serum 2 & RC2)](https://splice.com/plugins/your-plugins)
 
-- [FabFilter](https://www.fabfilter.com/download)
+- [FabFilter Total Bundle](https://www.fabfilter.com/download)
 
 - [Valhalla](https://valhalladsp.com/my-account/downloads/)
-
-- [Spitfire](https://labs.spitfireaudio.com/download)
 
 - [Route system sounds to Apollo Virtual Channels](https://www.youtube.com/watch?v=9K3D7kNb5DI): Audio MIDI Setup > Universal Audio Thunderbolt > Output > Configure Speakers > VIRTUAL 1/2 > Apply > Done
 
 - Ableton Settings
-  - Themes & Colors >
-    - Theme > Immaterial
   - Plug-Ins >
     - Use Audio Units v2 / v3 > On
     - Use VST2 / VST3 Plug-In > Off
+
+## Other Software
+
+- [Davinci Resolve](https://apps.cloud.blackmagicdesign.com/davinci-resolve)
 
 # Physical Dotfiles
 
