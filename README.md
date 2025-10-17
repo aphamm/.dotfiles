@@ -1,3 +1,24 @@
+Dotfiles are configuration files for programs. 
+
+versioning, reproducibility, and clarity about what’s truly indispensable
+
+Given the law of cosmic mean reversion, if I were to respawn tommorow here is my [minimal generating set](https://math.stackexchange.com/questions/3089880/minimal-generating-set) for life - the indispensable programmable elements able to span the state space of my desired reality. This is an evergreen endeavor.
+
+# Core Ideas
+- Movement
+- Connection
+- Health
+- Mind
+- Technology
+
+# Physical Dotfiles
+
+- Technology
+  - MacBook Air 2025 (M4)
+  - iPhone 17
+  - AirPods Pro 2
+  - SSD
+
 Here is my custom configuration for my MacBook Air 2025 (M4) 😎
 
 # Automated Configs 👨‍💻
@@ -80,7 +101,7 @@ git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
   - Advanced >
     - Show warning before removing from iCloud Drive > Off
 
-## Audio Production
+## Software
 
 - [Ableton Suite 12](https://ableton.centercode.com/project/home.html?cap=ea2ce822-bd02-401d-ba44-6c068717bc68)
   
@@ -92,8 +113,6 @@ git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
 
 - [Splice (Serum 2 & RC2)](https://splice.com/plugins/your-plugins)
 
-- [FabFilter Total Bundle](https://www.fabfilter.com/download)
-
 - [Valhalla](https://valhalladsp.com/my-account/downloads/)
 
 - [Route system sounds to Apollo Virtual Channels](https://www.youtube.com/watch?v=9K3D7kNb5DI): Audio MIDI Setup > Universal Audio Thunderbolt > Output > Configure Speakers > VIRTUAL 1/2 > Apply > Done
@@ -103,16 +122,17 @@ git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
     - Use Audio Units v2 / v3 > On
     - Use VST2 / VST3 Plug-In > Off
 
-## Other Software
-
 - [Davinci Resolve](https://apps.cloud.blackmagicdesign.com/davinci-resolve)
+- 
+## Privacy 
 
-# Physical Dotfiles
+- Search Engine: Google
+  - [My Google Activity](https://myactivity.google.com/myactivity?hl=en) >
+    - Web & App Activity > Turn Off & Delete
+    - Timeline > Turn Off & Delte
+    - YouTube History > Auto-delete 3 Months
 
-- Technology
-  - MacBook Air 2025 (M4)
-
-# Factory Reset
+# Preparing for a Factory Reset
 
 ```shell
 cd ~/.dotfiles && ./save.sh
