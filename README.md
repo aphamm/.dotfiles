@@ -4,13 +4,6 @@ versioning, reproducibility, and clarity about what’s truly indispensable
 
 Given the law of cosmic mean reversion, if I were to respawn tommorow here is my [minimal generating set](https://math.stackexchange.com/questions/3089880/minimal-generating-set) for life - the indispensable programmable elements able to span the state space of my desired reality. This is an evergreen endeavor.
 
-# Core Ideas
-- Movement
-- Connection
-- Health
-- Mind
-- Technology
-
 # Physical Dotfiles
 
 - Technology
@@ -61,6 +54,7 @@ git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
     - Apple Intelligence > Off
     - Siri > Off
   - Control Center >
+    - All Control Center Modules > Don't Show in Menu Bar
     - Accessibility Shortcuts > Show in Control Center
     - Battery >
       - Show Percentage > On
@@ -100,6 +94,12 @@ git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
     - Locations > apham's MacBook Air, External disks
   - Advanced >
     - Show warning before removing from iCloud Drive > Off
+   
+- Flux Settings
+  
+  - Sunset > 2700K (Tungsten)
+  - Bedtime > 1200K
+  - 4:00AM is when I wake up
 
 ## Software
 
@@ -123,14 +123,20 @@ git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
     - Use VST2 / VST3 Plug-In > Off
 
 - [Davinci Resolve](https://apps.cloud.blackmagicdesign.com/davinci-resolve)
-- 
-## Privacy 
+  
+## Privacy
+Inspired by the following [post](https://karpathy.bearblog.dev/digital-hygiene/).
 
+- Password Manager: [Apple Passwords](https://apps.apple.com/us/app/passwords/id6473799789)
 - Search Engine: Google
   - [My Google Activity](https://myactivity.google.com/myactivity?hl=en) >
     - Web & App Activity > Turn Off & Delete
     - Timeline > Turn Off & Delte
     - YouTube History > Auto-delete 3 Months
+- Email: [Proton](https://proton.me/mail)
+- VPN: Proton
+- DNS-based blocker: [NextDNS](https://my.nextdns.io/d85535/setup)
+- Network monitor: [The Little Snitch](https://www.obdev.at/products/littlesnitch/index.html)
 
 # Preparing for a Factory Reset
 
