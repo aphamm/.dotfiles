@@ -7,6 +7,8 @@ brew "node"
 brew "zsh-autosuggestions"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
+# Screen colour temperature controller
+cask "flux-app"
 cask "font-geist"
 # Software for iLok devices
 cask "ilok-license-manager"
@@ -16,6 +18,8 @@ cask "raycast"
 cask "spotify"
 # Open-source code editor
 cask "visual-studio-code"
+# Web browser with built-in email client focusing on customization and control
+cask "vivaldi"
 vscode "charliermarsh.ruff"
 vscode "davidanson.vscode-markdownlint"
 vscode "docker.docker"
