@@ -1,8 +1,4 @@
-Dotfiles are configuration files for programs. 
-
-versioning, reproducibility, and clarity about what’s truly indispensable
-
-Given the law of cosmic mean reversion, if I were to respawn tommorow here is my [minimal generating set](https://math.stackexchange.com/questions/3089880/minimal-generating-set) for life - the indispensable programmable elements able to span the state space of my desired reality. This is an evergreen endeavor.
+Dotfiles are configuration files for programs - maintaining versioning, reproducibility, and clarity about what’s truly indispensable. Why not write one for the most important game we play every single day: life. Given the law of cosmic mean reversion, if I were to respawn tommorow here is my [minimal generating set](https://math.stackexchange.com/questions/3089880/minimal-generating-set) for life - the indispensable programmable elements able to span the state space of my desired reality. This is an evergreen endeavor.
 
 # Physical Dotfiles
 
