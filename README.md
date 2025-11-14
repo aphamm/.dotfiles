@@ -45,7 +45,9 @@ git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
 - System Preferences
 
   - Battery >
-    - Options > Optimize video streaming while on battery > On
+    - Options >
+      - Prevent automatic sleeping on power adapter when the display is off > On
+      - Optimize video streaming while on battery > On
   - Control Center >
     - All Control Center Modules (Except for Wi-Fi) > Don't Show in Menu Bar
     - Accessibility Shortcuts > Show in Control Center
@@ -90,7 +92,6 @@ git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
     - iCloud > iCloud Drive
     - Locations > pham's MacBook Air, External disks
   - Advanced >
-    - Show all filename extensions > On
     - Show warning before removing from iCloud Drive > Off
     - Remove items from the Trash after 30 days > On
 
