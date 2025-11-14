@@ -18,9 +18,18 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 #             HOMEBREW              #
 #####################################
 
-# Install homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-eval "$(/opt/homebrew/bin/brew shellenv)"
+# Install homebrew (if not already installed)
+if ! command -v brew &> /dev/null; then
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
+# Detect Homebrew path (Apple Silicon vs Intel)
+if [ -d "/opt/homebrew/bin" ]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+else
+    echo "Error: Could not find Homebrew installation"
+    exit 1
+fi
 
 # Use latest homebrew
 brew update
@@ -41,8 +50,12 @@ brew cleanup
 # Install uv (Python package manager)
 curl -LsSf https://astral.sh/uv/install.sh | sh
 
-# Add $HOME/.local/bin to your PATH
-source $HOME/.local/bin/env
+# Add $HOME/.local/bin to your PATH (if file exists)
+if [ -f "$HOME/.local/bin/env" ]; then
+    source "$HOME/.local/bin/env"
+else
+    echo "Warning: $HOME/.local/bin/env not found. uv may not be in PATH."
+fi
 
 # Install Ruff globally
 uv tool install ruff@latest
@@ -68,14 +81,15 @@ curl https://sh.rustup.rs -sSf | sh -s -- -y
 #           CONFIG FILES            #
 #####################################
 
-# Copy VS code settings
+# Copy VS code settings (create directory if it doesn't exist)
+mkdir -p ~/Library/Application\ Support/Code/User
 cp ./settings.json ~/Library/Application\ Support/Code/User/settings.json
 
 # Copy Shell settings
 cp ./.zprofile ~
 cp ./.zshrc ~
-source ~/.zprofile
-source ~/.zshrc
+# Note: These will be sourced automatically on next shell start
+# Sourcing them now would cause errors since dependencies may not be installed yet
 
 #####################################
 #          APPLE CONFIGS            #

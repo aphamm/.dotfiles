@@ -1,6 +1,11 @@
 # Runs every time a new interactive shell starts
-source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# Source zsh plugins if Homebrew is installed and plugins exist
+if [ -n "$HOMEBREW_PREFIX" ]; then
+    [ -f "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ] && \
+        source "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+    [ -f "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ] && \
+        source "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+fi
 
 export NVM_DIR="$HOME/.nvm"
 
@@ -73,5 +78,6 @@ uv_init() {
 
 clear
 
-. "$HOME/.local/bin/env"
+# Source uv env if it exists
+[ -f "$HOME/.local/bin/env" ] && . "$HOME/.local/bin/env"
 

@@ -1,7 +1,9 @@
 tap "buo/cask-upgrade"
+# Play, record, convert, and stream audio and video
+brew "ffmpeg"
 # GitHub command-line tool
 brew "gh"
-# Platform built on V8 to build network applications
+# Open-source, cross-platform JavaScript runtime environment
 brew "node"
 # Fish-like fast/unobtrusive autosuggestions for zsh
 brew "zsh-autosuggestions"
@@ -9,6 +11,8 @@ brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 # Write, edit, and chat about your code with AI
 cask "cursor"
+# App to build and share containerised applications and microservices
+cask "docker-desktop"
 # Screen colour temperature controller
 cask "flux-app"
 # Software for iLok devices
