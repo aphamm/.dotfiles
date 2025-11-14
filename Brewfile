@@ -17,6 +17,8 @@ cask "ilok-license-manager"
 cask "raycast"
 # Open-source code editor
 cask "visual-studio-code"
+# Web browser with built-in email client focusing on customization and control
+cask "vivaldi"
 vscode "charliermarsh.ruff"
 vscode "davidanson.vscode-markdownlint"
 vscode "esbenp.prettier-vscode"

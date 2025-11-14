@@ -1,3 +1,13 @@
+Dotfiles are configuration files for programs - maintaining versioning, reproducibility, and clarity about what’s truly indispensable. Why not write one for the most important game we play every single day: life. Given the law of cosmic mean reversion, if I were to respawn tommorow here is my [minimal generating set](https://math.stackexchange.com/questions/3089880/minimal-generating-set) for life - the indispensable programmable elements able to span the state space of my desired reality. This is an evergreen endeavor.
+
+# Physical Dotfiles
+
+- Technology
+  - MacBook Air 2025 (M4)
+  - iPhone 17
+  - AirPods Pro 2
+  - SSD
+
 Here is my custom configuration for my MacBook Air 2025 (M4) 😎
 
 # Automated Configs 👨‍💻
@@ -40,6 +50,7 @@ git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
     - Apple Intelligence > Off
     - Siri > Off
   - Control Center >
+    - All Control Center Modules > Don't Show in Menu Bar
     - Accessibility Shortcuts > Show in Control Center
     - Battery >
       - Show Percentage > On
@@ -80,10 +91,16 @@ git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
   - Advanced >
     - Show warning before removing from iCloud Drive > Off
 
-## Audio Production
+- Flux Settings
+
+  - Sunset > 2700K (Tungsten)
+  - Bedtime > 1200K
+  - 4:00AM is when I wake up
+
+## Software
 
 - [Ableton Suite 12](https://ableton.centercode.com/project/home.html?cap=ea2ce822-bd02-401d-ba44-6c068717bc68)
-  
+
 - [UAD Software](https://help.uaudio.com/hc/en-us/articles/360057137692-Apple-Silicon-M1-M2-Compatibility-Info?_gl=1*1qpuawn*_ga*MTYzMjUzNzU0Ny4xNjgwMDI1NTUz*_ga_CPJ5176QFT*MTY4MDAyNTU2NC4xLjEuMTY4MDAyNTkwNy4wLjAuMA..)
 
 - [Soundtoys](https://accounts.soundtoys.com/#/licenses)
@@ -91,8 +108,6 @@ git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
 - [Soothe2](https://oeksound.com/downloads/)
 
 - [Splice (Serum 2 & RC2)](https://splice.com/plugins/your-plugins)
-
-- [FabFilter Total Bundle](https://www.fabfilter.com/download)
 
 - [Valhalla](https://valhalladsp.com/my-account/downloads/)
 
@@ -103,16 +118,19 @@ git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
     - Use Audio Units v2 / v3 > On
     - Use VST2 / VST3 Plug-In > Off
 
-## Other Software
-
 - [Davinci Resolve](https://apps.cloud.blackmagicdesign.com/davinci-resolve)
 
-# Physical Dotfiles
+## Privacy
+Inspired by the following [post](https://karpathy.bearblog.dev/digital-hygiene/).
 
-- Technology
-  - MacBook Air 2025 (M4)
+- Password Manager: [Apple Passwords](https://apps.apple.com/us/app/passwords/id6473799789)
+- Search Engine: Google
+  - [My Google Activity](https://myactivity.google.com/myactivity?hl=en) >
+    - Web & App Activity > Turn Off & Delete
+    - Timeline > Turn Off & Delte
+    - YouTube History > Auto-delete 3 Months
 
-# Factory Reset
+# Preparing for a Factory Reset
 
 ```shell
 cd ~/.dotfiles && ./save.sh
