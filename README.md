@@ -46,15 +46,11 @@ git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
 
   - Battery >
     - Options > Optimize video streaming while on battery > On
-  - Apple Intelligence & Siri >
-    - Apple Intelligence > Off
-    - Siri > Off
   - Control Center >
-    - All Control Center Modules > Don't Show in Menu Bar
+    - All Control Center Modules (Except for Wi-Fi) > Don't Show in Menu Bar
     - Accessibility Shortcuts > Show in Control Center
     - Battery >
       - Show Percentage > On
-      - Show Energy Mode > Always
     - Music Recognition > Show in Control Center
     - Menu Bar Only >
       - Spotlight > Don't Show in Menu Bar
@@ -63,6 +59,9 @@ git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
     - Night Shift >
       - Schedule > 6PM to 6AM
       - Color temperature > More Warm
+  - Apple Intelligence & Siri >
+    - Apple Intelligence > Off
+    - Siri > Off
   - Spotlight > Turn off All
   - Notifications > Turn off All
     - Allow notifications when the screen is locked > Off
@@ -79,17 +78,21 @@ git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
         - Copy picture of selected area to clipboard > Shift Command 4
       - Spotlight >
         - Show Spotlight search > Off
+        - Show Finder search window > Off
 
 - Finder Settings
 
   - General >
     - Show these items on the desktop > None
-    - New Finder windows show > apham
+    - New Finder windows show > pham
   - Sidebar >
     - Favorites > AirDrop, Applications, Downloads, austin
-    - Locations > apham's MacBook Air, External disks
+    - iCloud > iCloud Drive
+    - Locations > pham's MacBook Air, External disks
   - Advanced >
+    - Show all filename extensions > On
     - Show warning before removing from iCloud Drive > Off
+    - Remove items from the Trash after 30 days > On
 
 - Flux Settings
 
