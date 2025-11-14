@@ -12,8 +12,6 @@ export NVM_DIR="$HOME/.nvm"
 
 alias python='python3'
 alias pip='pip3'
-alias act='source .venv/bin/activate'
-alias pin='uv pip install'
 
 uv_init() {
 
@@ -57,7 +55,6 @@ uv_init() {
     fi
 
     uv venv .venv --python ${version}
-    source .venv/bin/activate
 
 
     if $ds_flag; then
@@ -77,3 +74,4 @@ uv_init() {
 clear
 
 . "$HOME/.local/bin/env"
+
