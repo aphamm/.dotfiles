@@ -77,6 +77,9 @@ corepack enable pnpm
 # https://stackoverflow.com/questions/57251508/run-rustups-curl-fetched-installer-script-non-interactively/57251636#57251636
 curl https://sh.rustup.rs -sSf | sh -s -- -y
 
+# Install Bun
+curl -fsSL https://bun.com/install | bash
+
 #####################################
 #           CONFIG FILES            #
 #####################################

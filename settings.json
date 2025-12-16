@@ -1,34 +1,19 @@
 {
-  // hide status bar at the bottom
   "workbench.statusBar.visible": false,
-  // show nothing when no editor is opened
   "workbench.startupEditor": "none",
-  // hide file path at the top of editor
   "breadcrumbs.enabled": false,
-  // ignore extension recommendations
   "extensions.ignoreRecommendations": true,
-  // set custom theme + font
   "workbench.colorTheme": "Vesper",
-  // does not compress empty directories
   "explorer.compactFolders": false,
-  // removes need to confirm moving files around in GUI
   "explorer.confirmDragAndDrop": false,
-  // removes need to confirm deleting files in GUI
   "explorer.confirmDelete": false,
-  // enable ligatures
   "editor.fontLigatures": true,
-  // set spacing between lines
   "editor.lineHeight": 1.6,
-  // add multiple cursors via Command key on Mac
   "editor.multiCursorModifier": "ctrlCmd",
-  // set cursor style to block
   "editor.cursorStyle": "block",
   "editor.lineNumbers": "relative",
-  // disable minimap
   "editor.minimap.enabled": false,
-  // change editor size
   "editor.fontSize": 14,
-  // make font inside comments italic
   "editor.tokenColorCustomizations": {
     "textMateRules": [
       {
@@ -39,26 +24,15 @@
       }
     ]
   },
-  // trim trailing whitespace after saving file
   "files.trimTrailingWhitespace": true,
-  // insert new line at end of file
   "files.insertFinalNewline": true,
-  // set tab size to 2 spaces
-  "editor.tabSize": 2,
-  // disable auto indentation detection
   "editor.detectIndentation": false,
-  // enable autosave of editor
-  "files.autoSave": "afterDelay",
-  // format code on save
   "editor.formatOnSave": true,
-  // format line after type
   "editor.formatOnType": true,
-  // set editor default formatter
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": {
     "source.fixAll": "explicit"
   },
-  // python formatter settings
   "[python]": {
     "editor.codeActionsOnSave": {
       "source.fixAll": "explicit",
@@ -66,12 +40,16 @@
     },
     "editor.defaultFormatter": "charliermarsh.ruff"
   },
-  // notebook formatter settings
   "notebook.formatOnSave.enabled": true,
   "notebook.codeActionsOnSave": {
     "notebook.source.fixAll": "explicit",
     "notebook.source.organizeImports": "explicit"
   },
   "workbench.sideBar.location": "right",
-  "window.zoomLevel": -0.8
+  "window.zoomLevel": -0.8,
+  "accessibility.signalOptions.volume": 0,
+  "editor.accessibilitySupport": "on",
+  "files.autoSave": "afterDelay",
+  "workbench.editor.enablePreview": false,
+  "cursor.composer.usageSummaryDisplay": "always"
 }

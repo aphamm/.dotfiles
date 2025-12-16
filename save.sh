@@ -10,8 +10,8 @@ function doIt() {
     cp ~/.zprofile ./.zprofile
     cp ~/.zshrc ./.zshrc
 
-    # Save VS code settings
-    cp ~/Library/Application\ Support/Code/User/settings.json ./settings.json
+    # Save code editor settings
+    cp ~/Library/Application\ Support/Cursor/User/settings.json ./settings.json
 
 }
 
