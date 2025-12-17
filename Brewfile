@@ -1,7 +1,5 @@
 tap "buo/cask-upgrade"
 tap "theboredteam/boring-notch"
-# Open-source, cross-platform JavaScript runtime environment
-brew "node"
 # Play, record, convert, and stream audio and video
 brew "ffmpeg"
 # GitHub command-line tool
