@@ -60,18 +60,26 @@ fi
 # Install Ruff globally
 uv tool install ruff@latest
 
-# Install Node Version Manager
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+# Download and install nvm:
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 
-# In lieu of restarting the shell
+# in lieu of restarting the shell
 \. "$HOME/.nvm/nvm.sh"
 
-# Install Node.js
-nvm install 22
+# Download and install Node.js:
+nvm install 25
 
-# Install performant pnpm
-npm install --global corepack@latest
+# Verify the Node.js version:
+node -v # Should print "v25.2.1".
+
+# Install Corepack:
+npm install -g corepack
+
+# Download and install pnpm:
 corepack enable pnpm
+
+# Verify pnpm version:
+pnpm -v
 
 # Install Rustup tool, which installs Rust
 # https://stackoverflow.com/questions/57251508/run-rustups-curl-fetched-installer-script-non-interactively/57251636#57251636
