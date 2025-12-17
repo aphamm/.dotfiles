@@ -20,8 +20,6 @@ cask "cursor"
 cask "flux-app"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
-# Software for iLok devices
-cask "ilok-license-manager"
 # Control your tools with a few keystrokes
 cask "raycast"
 # Web browser with built-in email client focusing on customization and control
