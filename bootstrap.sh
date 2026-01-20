@@ -1,12 +1,9 @@
 #!/usr/bin/env bash
+set -e  # Exit on first error
 
 # Navigate to current file directory
 cd "$(dirname "${BASH_SOURCE}")";
 git pull origin main;
-
-# Git credentials
-git config --global user.name aphamm
-git config --global user.email austinpham77@gmail.com
 
 # Ask for the administrator password upfront
 sudo -v
@@ -24,8 +21,10 @@ if ! command -v brew &> /dev/null; then
 fi
 
 # Detect Homebrew path (Apple Silicon vs Intel)
-if [ -d "/opt/homebrew/bin" ]; then
+if [ -f "/opt/homebrew/bin/brew" ]; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
+elif [ -f "/usr/local/bin/brew" ]; then
+    eval "$(/usr/local/bin/brew shellenv)"
 else
     echo "Error: Could not find Homebrew installation"
     exit 1
@@ -73,28 +72,20 @@ pnpm -v
 # https://stackoverflow.com/questions/57251508/run-rustups-curl-fetched-installer-script-non-interactively/57251636#57251636
 curl https://sh.rustup.rs -sSf | sh -s -- -y
 
-# Install Bun
-curl -fsSL https://bun.com/install | bash
-
 #####################################
 #           CONFIG FILES            #
 #####################################
 
-# Copy Cursor settings (create directory if it doesn't exist)
+# Symlink config files (creates parent dirs if needed)
 mkdir -p ~/Library/Application\ Support/Cursor/User
-cp ./settings.json ~/Library/Application\ Support/Cursor/User/settings.json
+mkdir -p ~/Library/Application\ Support/com.mitchellh.ghostty
 
-# Copy Shell settings
-cp ./.zprofile ~
-cp ./.zshrc ~
-# Note: These will be sourced automatically on next shell start
-# Sourcing them now would cause errors since dependencies may not be installed yet
-
-# Copy Ghostty settings
-cp ./ghostty_config $HOME/Library/Application\ Support/com.mitchellh.ghostty/config
-
-# Copy Starship settings
-cp ./.starship.toml ~/
+ln -sf ~/.dotfiles/.gitconfig ~/.gitconfig
+ln -sf ~/.dotfiles/.zprofile ~/.zprofile
+ln -sf ~/.dotfiles/.zshrc ~/.zshrc
+ln -sf ~/.dotfiles/.starship.toml ~/.starship.toml
+ln -sf ~/.dotfiles/settings.json ~/Library/Application\ Support/Cursor/User/settings.json
+ln -sf ~/.dotfiles/ghostty_config ~/Library/Application\ Support/com.mitchellh.ghostty/config
 
 #####################################
 #          APPLE CONFIGS            #
@@ -286,3 +277,37 @@ defaults write com.apple.ActivityMonitor ShowCategory -int 0
 # Sort Activity Monitor results by CPU usage
 defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
 defaults write com.apple.ActivityMonitor SortDirection -int 0
+
+#####################################
+#        VERIFY SYMLINKS            #
+#####################################
+
+echo ""
+echo "Verifying symlinks..."
+links=(
+    "$HOME/.gitconfig"
+    "$HOME/.zprofile"
+    "$HOME/.zshrc"
+    "$HOME/.starship.toml"
+    "$HOME/Library/Application Support/Cursor/User/settings.json"
+    "$HOME/Library/Application Support/com.mitchellh.ghostty/config"
+)
+
+all_ok=true
+for link in "${links[@]}"; do
+    if [ -L "$link" ]; then
+        echo "  ✓ $link"
+    else
+        echo "  ✗ $link (not a symlink)"
+        all_ok=false
+    fi
+done
+
+if $all_ok; then
+    echo ""
+    echo "Bootstrap complete! All symlinks verified."
+else
+    echo ""
+    echo "Warning: Some symlinks were not created correctly."
+    exit 1
+fi
