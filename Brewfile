@@ -1,17 +1,11 @@
 tap "buo/cask-upgrade"
 tap "theboredteam/boring-notch"
-# Play, record, convert, and stream audio and video
-brew "ffmpeg"
-# GitHub command-line tool
-brew "gh"
-# Command-line tool to export and inspect local iMessage database
-brew "imessage-exporter"
-# Command-line interface for Vercel
-brew "vercel-cli"
 # Fish-like fast/unobtrusive autosuggestions for zsh
 brew "zsh-autosuggestions"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
+# Cross-shell prompt
+brew "starship"
 # Not so boring notch That Rocks 🎸🎶
 cask "theboredteam/boring-notch/boring-notch"
 # Terminal-based AI coding assistant
@@ -27,6 +21,14 @@ cask "ghostty"
 cask "raycast"
 # Web browser with built-in email client focusing on customization and control
 cask "vivaldi"
+# Play, record, convert, and stream audio and video
+brew "ffmpeg"
+# GitHub command-line tool
+brew "gh"
+# Command-line tool to export and inspect local iMessage database
+brew "imessage-exporter"
+# Command-line interface for Vercel
+brew "vercel-cli"
 vscode "charliermarsh.ruff"
 vscode "davidanson.vscode-markdownlint"
 vscode "esbenp.prettier-vscode"

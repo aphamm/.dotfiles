@@ -1,44 +1,36 @@
 # ~/.starship.toml
 
-# no newline between prompts
 add_newline = false
 
 format = """
-$shlvl\
-$username\
-$hostname\
 $directory\
 $git_branch\
-$git_commit\
-$c\
-$cmake\
+$git_status\
 $python\
-$rust\
-$sudo\
+$cmd_duration\
 $character"""
 
-[shlvl]
-disabled = false
-style = "bold red"
-format = "[$shlvl]($style) "
-threshold = 0
-
-[username]
-format = "[$user@]($style)"
-style_user="bold green"
-
-[hostname]
-style="bold green"
-format = "[$hostname]($style) "
-
 [directory]
-truncation_length = 3
-fish_style_pwd_dir_length = 2
+truncation_length = 4
+truncate_to_repo = true
 
 [git_branch]
 format = "[$symbol$branch]($style) "
-symbol = '↪ '
+symbol = ""
+
+[git_status]
+format = '([$all_status$ahead_behind]($style) )'
+style = "bold yellow"
 
 [python]
-format = '[${symbol}(${version} )(\($virtualenv\) )]($style)'
-version_format = 'v${major}.${minor}'
+format = '[(\($virtualenv\))]($style) '
+style = "cyan"
+
+[cmd_duration]
+min_time = 2000
+format = "[$duration]($style) "
+style = "yellow"
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"

@@ -2,8 +2,9 @@
 set -e  # Exit on first error
 
 # Navigate to current file directory
-cd "$(dirname "${BASH_SOURCE}")";
-git pull origin main;
+DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE}")" && pwd)"
+cd "$DOTFILES_DIR"
+git pull origin main
 
 # Ask for the administrator password upfront
 sudo -v
@@ -36,7 +37,7 @@ brew update
 # Upgrade already-installed formulae
 brew upgrade
 
-# Install via Brewflie
+# Install tools via Brewfile
 brew bundle --file=./Brewfile
 
 # Remove outdated versions from cellar
@@ -73,6 +74,17 @@ pnpm -v
 curl https://sh.rustup.rs -sSf | sh -s -- -y
 
 #####################################
+#         CLAUDE CODE PLUGINS       #
+#####################################
+
+# Install WakaTime plugin for coding activity tracking
+claude plugin marketplace add https://github.com/wakatime/claude-code-wakatime.git
+claude plugin i claude-code-wakatime@wakatime
+
+# Note: Add your WakaTime API key to ~/.wakatime.cfg
+# See .wakatime.cfg.template for format
+
+#####################################
 #           CONFIG FILES            #
 #####################################
 
@@ -80,12 +92,12 @@ curl https://sh.rustup.rs -sSf | sh -s -- -y
 mkdir -p ~/Library/Application\ Support/Cursor/User
 mkdir -p ~/Library/Application\ Support/com.mitchellh.ghostty
 
-ln -sf ~/.dotfiles/.gitconfig ~/.gitconfig
-ln -sf ~/.dotfiles/.zprofile ~/.zprofile
-ln -sf ~/.dotfiles/.zshrc ~/.zshrc
-ln -sf ~/.dotfiles/.starship.toml ~/.starship.toml
-ln -sf ~/.dotfiles/settings.json ~/Library/Application\ Support/Cursor/User/settings.json
-ln -sf ~/.dotfiles/ghostty_config ~/Library/Application\ Support/com.mitchellh.ghostty/config
+ln -sf "$DOTFILES_DIR/.gitconfig" ~/.gitconfig
+ln -sf "$DOTFILES_DIR/.zprofile" ~/.zprofile
+ln -sf "$DOTFILES_DIR/.zshrc" ~/.zshrc
+ln -sf "$DOTFILES_DIR/.starship.toml" ~/.starship.toml
+ln -sf "$DOTFILES_DIR/settings.json" ~/Library/Application\ Support/Cursor/User/settings.json
+ln -sf "$DOTFILES_DIR/ghostty_config" ~/Library/Application\ Support/com.mitchellh.ghostty/config
 
 #####################################
 #          APPLE CONFIGS            #
@@ -94,7 +106,7 @@ ln -sf ~/.dotfiles/ghostty_config ~/Library/Application\ Support/com.mitchellh.g
 # ~/.macos — https://mths.be/macos
 
 # Close any open System Preferences panes, to prevent them from overriding
-# settings we’re about to change
+# settings we're about to change
 osascript -e 'tell application "System Preferences" to quit'
 
 # Appearance
@@ -112,13 +124,13 @@ defaults write NSGlobalDomain _HIHideMenuBar -bool true
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
 
-# Don’t animate opening applications from the Dock
+# Don't animate opening applications from the Dock
 defaults write com.apple.dock launchanim -bool false
 
 # Show only open applications in the Dock
 defaults write com.apple.dock static-only -bool true
 
-# Don’t show recent applications in Dock
+# Don't show recent applications in Dock
 defaults write com.apple.dock show-recents -bool false
 
 # Smaller icon sizes in Dock
@@ -142,16 +154,16 @@ sudo nvram SystemAudioVolume=" "
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
-# Disable automatic capitalization as it’s annoying when typing code
+# Disable automatic capitalization as it's annoying when typing code
 defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
 
-# Disable automatic period substitution as it’s annoying when typing code
+# Disable automatic period substitution as it's annoying when typing code
 defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
 
-# Disable smart dashes as they’re annoying when typing code
+# Disable smart dashes as they're annoying when typing code
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
-# Disable smart quotes as they’re annoying when typing code
+# Disable smart quotes as they're annoying when typing code
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 
 # Trackpad
@@ -177,7 +189,7 @@ defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 # Automatically quit printer app once the print jobs complete
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 
-# Disable the “Are you sure you want to open this application?” dialog
+# Disable the "Are you sure you want to open this application?" dialog
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
 # Disable Resume system-wide

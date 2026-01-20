@@ -1,5 +1,4 @@
 # Runs every time a new interactive shell starts
-# Source zsh plugins if Homebrew is installed and plugins exist
 if [ -n "$HOMEBREW_PREFIX" ]; then
     [ -f "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ] && \
         source "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
@@ -7,8 +6,6 @@ if [ -n "$HOMEBREW_PREFIX" ]; then
         source "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 fi
 
-alias python='python3'
-alias pip='pip3'
 alias c='claude'
 
 # Load Starship prompt if installed
@@ -19,3 +16,5 @@ command -v starship &>/dev/null && eval "$(starship init zsh)"
 
 # Source Rust/Cargo env if it exists
 [ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
+
+clear
