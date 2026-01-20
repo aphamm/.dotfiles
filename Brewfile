@@ -12,10 +12,15 @@ brew "vercel-cli"
 brew "zsh-autosuggestions"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
+# Not so boring notch That Rocks 🎸🎶
+cask "theboredteam/boring-notch/boring-notch"
+# Terminal-based AI coding assistant
+cask "claude-code"
 # Write, edit, and chat about your code with AI
 cask "cursor"
 # Screen colour temperature controller
 cask "flux-app"
+cask "font-geist-mono"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
 # Control your tools with a few keystrokes

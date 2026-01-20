@@ -17,6 +17,10 @@ export NVM_DIR="$HOME/.nvm"
 
 alias python='python3'
 alias pip='pip3'
+alias c='claude'
+
+# Load Starship prompt if installed
+[ -f "$(which starship 2>/dev/null)" ] && eval "$(starship init zsh)"
 
 # Source uv env if it exists
 [ -f "$HOME/.local/bin/env" ] && . "$HOME/.local/bin/env"

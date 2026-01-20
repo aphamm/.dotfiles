@@ -80,15 +80,21 @@ curl -fsSL https://bun.com/install | bash
 #           CONFIG FILES            #
 #####################################
 
-# Copy VS code settings (create directory if it doesn't exist)
-mkdir -p ~/Library/Application\ Support/Code/User
-cp ./settings.json ~/Library/Application\ Support/Code/User/settings.json
+# Copy Cursor settings (create directory if it doesn't exist)
+mkdir -p ~/Library/Application\ Support/Cursor/User
+cp ./settings.json ~/Library/Application\ Support/Cursor/User/settings.json
 
 # Copy Shell settings
 cp ./.zprofile ~
 cp ./.zshrc ~
 # Note: These will be sourced automatically on next shell start
 # Sourcing them now would cause errors since dependencies may not be installed yet
+
+# Copy Ghostty settings
+cp ./ghostty_config $HOME/Library/Application\ Support/com.mitchellh.ghostty/config
+
+# Copy Starship settings
+cp ./.starship.toml ~/
 
 #####################################
 #          APPLE CONFIGS            #

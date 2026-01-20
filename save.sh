@@ -4,14 +4,20 @@ git pull origin main;
 
 function doIt() {
 	# Save brew file
-    brew bundle dump --describe --file=./Brewfile2
+    brew bundle dump --describe --file=./Brewfile
 
     # Save relevant config files
     cp ~/.zprofile ./.zprofile
     cp ~/.zshrc ./.zshrc
 
-    # Save code editor settings
+    # Save Cursor editor settings
     cp ~/Library/Application\ Support/Cursor/User/settings.json ./settings.json
+
+	# Save Ghostty settings
+    cp $HOME/Library/Application\ Support/com.mitchellh.ghostty/config ghostty_config
+
+    # Save Starship settings
+    cp ~/.starship.toml ./starship.toml
 
 }
 

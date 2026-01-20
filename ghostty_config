@@ -1,0 +1,17 @@
+theme = vesper
+window-theme = ghostty
+macos-titlebar-style = tabs
+macos-icon = glass
+font-family = "Geist Mono"
+font-size = 18
+background-opacity = 0.95
+background-blur = 5
+window-padding-x = 10
+focus-follows-mouse = true
+clipboard-read = allow
+clipboard-write = allow
+clipboard-trim-trailing-spaces = true
+clipboard-paste-protection = true
+quit-after-last-window-closed = true
+macos-auto-secure-input = true
+macos-window-shadow = true
