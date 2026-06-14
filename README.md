@@ -75,6 +75,9 @@ git clone --recurse-submodules git@github.com:aphamm/.dotfiles.git ~/.dotfiles &
       - Copy picture of screen to the clipboard > Off
       - Save picture of selected area as file > Shift Command 3
       - Copy picture of selected area to clipboard > Shift Command 4
+    - Services > Text >
+      - Convert Text to Simplified Chinese > Off
+      - Convert Text to Traditional Chinese > Off
     - Spotlight >
       - Show Spotlight search > Off
       - Show Finder search window > Off
