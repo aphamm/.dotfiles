@@ -1,19 +1,32 @@
 {
+  // BASICS
+  // parse this file (and other editor.json) as JSONC so comments are allowed
+  "files.associations": { "editor.json": "jsonc" },
   "workbench.statusBar.visible": false,
   "workbench.startupEditor": "none",
-  "breadcrumbs.enabled": false,
+  "editor.minimap.enabled": false,
   "extensions.ignoreRecommendations": true,
-  "workbench.colorTheme": "Vesper",
+
+  // THEMES — auto-switch with OS appearance
+  "window.autoDetectColorScheme": true,
+  "workbench.preferredLightColorTheme": "Ayu Light",
+  "workbench.preferredDarkColorTheme": "Ayu Dark",
+  "custom-ui-style.font.sansSerif": "Geist Mono",
+  "editor.fontFamily": "Geist Mono",
+
+  // SIDEBAR
+  "workbench.tree.indent": 20,
   "explorer.compactFolders": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
+
+  // EDITOR
+  "editor.fontSize": 14,
   "editor.fontLigatures": true,
-  "editor.lineHeight": 1.6,
+  "editor.lineHeight": 1.5,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.cursorStyle": "block",
-  "editor.lineNumbers": "relative",
-  "editor.minimap.enabled": false,
-  "editor.fontSize": 14,
+  // italicize comments
   "editor.tokenColorCustomizations": {
     "textMateRules": [
       {
@@ -24,14 +37,18 @@
       }
     ]
   },
+
+  // FORMATTER
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
+  "editor.tabSize": 2,
   "editor.detectIndentation": false,
+  "files.autoSave": "afterDelay",
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.codeActionsOnSave": {
-    "source.fixAll": "explicit"
+  "editor.defaultFormatter": "biomejs.biome",
+  "[just]": {
+    "editor.formatOnSave": false
   },
   "[python]": {
     "editor.codeActionsOnSave": {
@@ -40,16 +57,13 @@
     },
     "editor.defaultFormatter": "charliermarsh.ruff"
   },
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+  },
   "notebook.formatOnSave.enabled": true,
   "notebook.codeActionsOnSave": {
     "notebook.source.fixAll": "explicit",
     "notebook.source.organizeImports": "explicit"
   },
-  "workbench.sideBar.location": "right",
-  "window.zoomLevel": -0.8,
-  "accessibility.signalOptions.volume": 0,
-  "editor.accessibilitySupport": "on",
-  "files.autoSave": "afterDelay",
-  "workbench.editor.enablePreview": false,
-  "cursor.composer.usageSummaryDisplay": "always"
+  "notebook.output.fontFamily": "Andale Mono"
 }

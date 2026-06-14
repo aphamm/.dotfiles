@@ -1,43 +1,82 @@
 tap "buo/cask-upgrade"
-tap "theboredteam/boring-notch"
+tap "aphamm/ztk", "https://github.com/aphamm/ztk"
+
+# --- shell ---
 # Fish-like fast/unobtrusive autosuggestions for zsh
 brew "zsh-autosuggestions"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
-# Cross-shell prompt
-brew "starship"
-# Not so boring notch That Rocks 🎸🎶
-cask "theboredteam/boring-notch/boring-notch"
-# Terminal-based AI coding assistant
-cask "claude-code"
-# Write, edit, and chat about your code with AI
-cask "cursor"
-# Screen colour temperature controller
-cask "flux-app"
-cask "font-geist-mono"
-# Terminal emulator that uses platform-native UI and GPU acceleration
-cask "ghostty"
-# Control your tools with a few keystrokes
-cask "raycast"
-# Web browser with built-in email client focusing on customization and control
-cask "vivaldi"
-# Play, record, convert, and stream audio and video
-brew "ffmpeg"
+
+# --- cli ---
 # GitHub command-line tool
 brew "gh"
-# Command-line tool to export and inspect local iMessage database
-brew "imessage-exporter"
+# Handy way to save and run project-specific commands
+brew "just"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
+# Shell script linter
+brew "shellcheck"
+# Play, record, convert, and stream audio and video
+brew "ffmpeg"
+# Download video/audio + auto-subtitles (YouTube transcripts per AGENTS.md)
+brew "yt-dlp"
 # Command-line interface for Vercel
 brew "vercel-cli"
+# Token-saving shell output proxy for Codex/Claude hooks
+brew "aphamm/ztk/ztk"
+
+# --- languages ---
+# Open source programming language to build simple/reliable/efficient software
+brew "go"
+
+# --- ai / coding ---
+# OpenAI Codex CLI
+cask "codex"
+
+# --- apps ---
+# Control your tools with a few keystrokes
+cask "raycast"
+# Monospace font
+cask "font-geist-mono"
+# AI note taker for in-person conversations
+cask "plaud"
+
+# --- cloud / infra ---
+# AWS CLI for managing AWS resources
+brew "awscli"
+# Google Cloud SDK for managing GCP resources
+cask "gcloud-cli"
+
+# --- editor ---
+# Code editor (extensions below install into it via the `code` CLI)
+cask "visual-studio-code"
+
+# --- editor extensions ---
+# Python: lint/format (ruff), type-check (basedpyright), runtime + debug
 vscode "charliermarsh.ruff"
-vscode "davidanson.vscode-markdownlint"
-vscode "esbenp.prettier-vscode"
-vscode "ms-python.debugpy"
+vscode "detachhead.basedpyright"
 vscode "ms-python.python"
+vscode "ms-python.debugpy"
+# JS/TS/JSON: lint + format (default formatter set in editor.json)
+vscode "biomejs.biome"
+# Rust: language server + formatter ([rust] block in editor.json)
+vscode "rust-lang.rust-analyzer"
+# Shell: ShellCheck integration (matches `just lint`)
+vscode "timonwong.shellcheck"
+# Markdown lint
+vscode "davidanson.vscode-markdownlint"
+# TOML (pyproject.toml, config.toml)
+vscode "tamasfe.even-better-toml"
+# YAML (config.yaml, plists)
+vscode "redhat.vscode-yaml"
+# justfile syntax (editor.json has a [just] block)
+vscode "nefrob.vscode-just-syntax"
+# Inline diagnostics — shows linter errors on the line
+vscode "usernamehw.errorlens"
+# Jupyter
 vscode "ms-toolsai.jupyter"
 vscode "ms-toolsai.jupyter-keymap"
 vscode "ms-toolsai.jupyter-renderers"
-vscode "ms-toolsai.vscode-jupyter-cell-tags"
-vscode "ms-toolsai.vscode-jupyter-powertoys"
-vscode "ms-toolsai.vscode-jupyter-slideshow"
-vscode "raunofreiberg.vesper"
+vscode "teabyii.ayu"
+# Custom UI font (custom-ui-style.font.* in editor.json)
+vscode "subframe7536.custom-ui-style"
