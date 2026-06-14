@@ -1,0 +1,12 @@
+[submodule "agents/external/claude-plugins-official"]
+	path = agents/external/claude-plugins-official
+	url = https://github.com/anthropics/claude-plugins-official.git
+	branch = main
+[submodule "agents/external/hegelian-dialectic-skill"]
+	path = agents/external/hegelian-dialectic-skill
+	url = https://github.com/KyleAMathews/hegelian-dialectic-skill.git
+	branch = main
+[submodule "agents/external/mattpocock-skills"]
+	path = agents/external/mattpocock-skills
+	url = https://github.com/mattpocock/skills.git
+	branch = main

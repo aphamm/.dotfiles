@@ -1,0 +1,38 @@
+# Codex durable preferences.
+# Machine-local state (trusted project paths, plugin caches, hook hashes,
+# MCP server paths, app SHAs) is intentionally omitted — Codex regenerates it.
+
+model = "gpt-5.5"
+model_reasoning_effort = "high"
+personality = "pragmatic"
+approvals_reviewer = "guardian_subagent"
+service_tier = "priority"
+
+[tui]
+theme = "ansi"
+status_line = ["model-with-reasoning", "project-name", "git-branch", "context-used", "context-window-size"]
+status_line_use_colors = true
+
+[features]
+hooks = true
+terminal_resize_reflow = true
+prevent_idle_sleep = true
+js_repl = false
+
+[desktop]
+ambient-suggestions-enabled = true
+usePointerCursors = false
+mac-menu-bar-enabled = false
+followUpQueueMode = "steer"
+composerEnterBehavior = "cmdIfMultiline"
+localeOverride = "en-US"
+preventSleepWhileRunning = true
+keepRemoteControlAwakeWhilePluggedIn = true
+git-branch-prefix = ""
+notifications-turn-mode = "always"
+conversationDetailMode = "STEPS_COMMANDS"
+reviewDelivery = "inline"
+appearanceTheme = "system"
+
+[desktop.open-in-target-preferences]
+global = "vscode"
