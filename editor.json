@@ -6,9 +6,11 @@
   "workbench.startupEditor": "none",
   "editor.minimap.enabled": false,
   "extensions.ignoreRecommendations": true,
+  "chat.disableAIFeatures": true,
 
   // THEMES — auto-switch with OS appearance
   "window.autoDetectColorScheme": true,
+  "window.zoomLevel": 0.4,
   "workbench.preferredLightColorTheme": "Ayu Light",
   "workbench.preferredDarkColorTheme": "Ayu Dark",
   "custom-ui-style.font.sansSerif": "Geist Mono",
@@ -21,7 +23,7 @@
   "explorer.confirmDelete": false,
 
   // EDITOR
-  "editor.fontSize": 14,
+  "editor.fontSize": 16,
   "editor.fontLigatures": true,
   "editor.lineHeight": 1.5,
   "editor.multiCursorModifier": "ctrlCmd",
@@ -37,6 +39,7 @@
       }
     ]
   },
+
 
   // FORMATTER
   "files.trimTrailingWhitespace": true,
@@ -60,10 +63,4 @@
   "[rust]": {
     "editor.defaultFormatter": "rust-lang.rust-analyzer"
   },
-  "notebook.formatOnSave.enabled": true,
-  "notebook.codeActionsOnSave": {
-    "notebook.source.fixAll": "explicit",
-    "notebook.source.organizeImports": "explicit"
-  },
-  "notebook.output.fontFamily": "Andale Mono"
 }
