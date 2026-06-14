@@ -1,3 +1,5 @@
+# Dotfiles 📁
+
 Dotfiles are configuration files for programs - maintaining versioning, reproducibility, and clarity about what’s truly indispensable. Why not write one for the most important game we play every single day: life. Given the law of cosmic mean reversion, if I were to respawn tommorow here is my [minimal generating set](https://math.stackexchange.com/questions/3089880/minimal-generating-set) for life - the indispensable programmable elements able to span the state space of my desired reality. This is an evergreen endeavor.
 
 # Physical Dotfiles
@@ -15,12 +17,14 @@ Here is my custom configuration for my MacBook Air 2025 (M4) 😎
 First, run the following in your terminal.
 
 ```shell
-# install xcode CLI & rosetta
-# xcode-select --install
-touch /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress;
-softwareupdate -i -a
-rm /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress && \
-softwareupdate --install-rosetta --agree-to-license
+# install Command Line Tools
+touch /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
+CLT=$(softwareupdate -l | sed -n 's/.*Label: \(Command Line Tools.*\)/\1/p' | tail -1)
+softwareupdate -i "$CLT" --verbose
+rm -f /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
+
+# verify before cloning
+xcode-select -p && git --version
 
 # generate ssh key, start ssh-agent, add key to agent, copy to clipboard
 ssh-keygen -t ed25519 -C "austinpham77@gmail.com" && \
@@ -32,80 +36,106 @@ ssh-keygen -t ed25519 -C "austinpham77@gmail.com" && \
 Save ssh key to [GitHub](https://github.com/settings/keys) then...
 
 ```shell
-git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
-  cd ~/.dotfiles && ./bootstrap.sh
+git clone --recurse-submodules git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
+  cd ~/.dotfiles && ./init.sh
 ```
 
 # Manual Configs 🤮
 
 - Retrieve documents from SSD (`Pham`)
-
 - Import `rayconfig` settings with password `austinpham`
 
-- System Preferences
-
-  - Battery >
-    - Options >
-      - Prevent automatic sleeping on power adapter when the display is off > On
-      - Optimize video streaming while on battery > On
+- System Preferences (not automatable via CLI)
+  - Accessibility > Display >
+    - Color > Red
+    - Color Filter > On
+    - Filter Type > Color Tint
+    - Intensity > High
   - Control Center >
-    - All Control Center Modules (Except for Wi-Fi) > Don't Show in Menu Bar
+    - All Modules (Except Wi-Fi) > Don't Show in Menu Bar
     - Accessibility Shortcuts > Show in Control Center
-    - Battery >
-      - Show Percentage > On
     - Music Recognition > Show in Control Center
-    - Menu Bar Only >
-      - Spotlight > Don't Show in Menu Bar
+    - Spotlight > Don't Show in Menu Bar
   - Displays >
+    - Arrange > External Display on Top
+    - External Display > Use as > Main display
     - Automatically adjust brightness > Off
-    - Night Shift >
-      - Schedule > 6PM to 6AM
-      - Color temperature > More Warm
-  - Apple Intelligence & Siri >
-    - Apple Intelligence > Off
-    - Siri > Off
-  - Spotlight > Turn off All
-  - Notifications > Turn off All
+    - Night Shift > Sunset to Sunrise, More Warm
+  - Spotlight > All Off
+    - Help Apple Improve Search > Off
+  - Notifications
     - Allow notifications when the screen is locked > Off
-  - Focus >
-    - Share across devices > On
-  - Screen Time >
-    - Share across devices > On
+  - Focus > Share across devices > On
+  - Screen Time > Share across devices > Off
   - Keyboard >
+    - Press 🌐 key to > Do Nothing
     - Keyboard Shortcuts >
-      - Screenshots >
-        - Save picture of screen as a file > Off
-        - Copy picture of screen to the clipboard > Off
-        - Save picture of selected area as file > Shift Command 3
-        - Copy picture of selected area to clipboard > Shift Command 4
-      - Spotlight >
-        - Show Spotlight search > Off
-        - Show Finder search window > Off
+    - Screenshots >
+      - Save picture of screen as a file > Off
+      - Copy picture of screen to the clipboard > Off
+      - Save picture of selected area as file > Shift Command 3
+      - Copy picture of selected area to clipboard > Shift Command 4
+    - Spotlight >
+      - Show Spotlight search > Off
+      - Show Finder search window > Off
 
-- Finder Settings
-
+- Finder
   - General >
     - Show these items on the desktop > None
-    - New Finder windows show > pham
+    - New Finder windows show > austin
   - Sidebar >
-    - Favorites > AirDrop, Applications, Downloads, austin
+    - Favorites > AirDrop, Applications, Downloads, apham (home)
     - iCloud > iCloud Drive
-    - Locations > pham's MacBook Air, External disks
+    - Locations > austin's MacBook Air, External disks, Connected servers
+    - Tags > None
+
+- Apple Music >
+  - General >
+    - Library >
+      - Download Dolby Atmos > On
+      - Always check for available downloads > On
+  - Playback
+    - Crossfade > 12 seconds
+    - Sound Enhancer > high
+    - Sound Check > On
+    - Loseless Audio
+      - Enable Lossless Audio > On
+      - Streaming + Download > Lossless
+    - Spatial Audio > Dolby Atmos > Always On
   - Advanced >
-    - Show warning before removing from iCloud Drive > Off
-    - Remove items from the Trash after 30 days > On
-
-- Flux Settings
-
-  - Sunset > 2700K (Tungsten)
-  - Bedtime > 1200K
-  - 4:00AM is when I wake up
+    - Add songs to Library when adding to >
+      - Playlist > On
+      - Favorites > On
+    - Automatically update artwork for imported songs > On
 
 ## Software
 
+- [Terminal]
+  - Profiles > Keyboard
+    - Use option as Meta key > On
+- [Helium](https://helium.computer)
+- [Spokenly](https://apps.apple.com/us/app/spokenly-voice-to-text-ai-app/id6740315592)
+  - General Settings
+    - Launch at login > On
+    - Show in Dock > Off
+    - Show in Status Bar > Off
+    - Use Escape to cancel recording > On
+    - Microphone Priorty Settings > MacBook Air Microphone
+    - Audio & Feedback > All Off
+    - Local Whisper Configuration >
+      - Language > English
+      - Prompt > "No need to capitalize. Keep it casual."
+    - Local-only mode > On
+  - Dication Models > Local
+    - Nvidia Parakeet Tdt 0.6B V2 (Best for English)
+  - Keyboard Controls
+    - Activation Keys > Toggle, Fn
+
+## Music
+
 - [Ableton Suite 12](https://ableton.centercode.com/project/home.html?cap=ea2ce822-bd02-401d-ba44-6c068717bc68)
 
-- [UAD Software](https://help.uaudio.com/hc/en-us/articles/360057137692-Apple-Silicon-M1-M2-Compatibility-Info?_gl=1*1qpuawn*_ga*MTYzMjUzNzU0Ny4xNjgwMDI1NTUz*_ga_CPJ5176QFT*MTY4MDAyNTU2NC4xLjEuMTY4MDAyNTkwNy4wLjAuMA..)
+- [UAD Software](https://help.uaudio.com/hc/en-us/articles/360057137692-Apple-Silicon-M1-M2-Compatibility-Info)
 
 - [Soundtoys](https://accounts.soundtoys.com/#/licenses)
 
@@ -122,25 +152,24 @@ git clone git@github.com:aphamm/.dotfiles.git ~/.dotfiles && \
     - Use Audio Units v2 / v3 > On
     - Use VST2 / VST3 Plug-In > Off
 
-- [Davinci Resolve](https://apps.cloud.blackmagicdesign.com/davinci-resolve)
-
 ## Privacy
+
 Inspired by the following [post](https://karpathy.bearblog.dev/digital-hygiene/).
 
 - Password Manager: [Apple Passwords](https://apps.apple.com/us/app/passwords/id6473799789)
 - Search Engine: Google
   - [My Google Activity](https://myactivity.google.com/myactivity?hl=en) >
     - Web & App Activity > Turn Off & Delete
-    - Timeline > Turn Off & Delte
+    - Timeline > Turn Off & Delete
     - YouTube History > Auto-delete 3 Months
 
 # Preparing for a Factory Reset
 
 ```shell
-cd ~/.dotfiles && ./save.sh
+cd ~/.dotfiles && just save   # refresh Brewfile, then commit + push
 ```
 
-- Save documents to SSD (`Pham`)
+- Clear out `~/Documents` and `~/Downloads`
 
 - Export `rayconfig` settings
 
