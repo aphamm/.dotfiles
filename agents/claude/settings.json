@@ -106,7 +106,7 @@
   },
   "skipDangerousModePermissionPrompt": true,
   "skipWorkflowUsageWarning": true,
-  "theme": "dark-ansi",
+  "theme": "light-daltonized",
   "remoteControlAtStartup": true,
   "agentPushNotifEnabled": false,
   "voiceEnabled": true

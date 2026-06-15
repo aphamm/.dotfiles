@@ -22,6 +22,9 @@ if command -v uv &> /dev/null; then
     uv tool install pytest@latest        # Test runner
     uv tool install vulture@latest       # Dead code finder
     uv tool install radon@latest         # Cyclomatic complexity analyzer
+
+    # Data-access CLIs (not dev tools)
+    uv tool install twitter-cli@latest   # Read X/Twitter timeline + search via browser cookies
 fi
 
 echo "==> Python setup complete!"

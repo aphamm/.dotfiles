@@ -43,6 +43,10 @@ cn() {
 # Source Rust/Cargo env if it exists
 [ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
 
+# twitter-cli credentials — read from macOS Keychain, never stored in repo
+export TWITTER_AUTH_TOKEN="$(security find-generic-password -a "$USER" -s twitter_auth_token -w 2>/dev/null)"
+export TWITTER_CT0="$(security find-generic-password -a "$USER" -s twitter_ct0 -w 2>/dev/null)"
+
 # Preferred editor for external-editor actions
 export VISUAL="code"
 export EDITOR="code"

@@ -67,6 +67,8 @@ git clone --recurse-submodules git@github.com:aphamm/.dotfiles.git ~/.dotfiles &
     - Allow notifications when the screen is locked > Off
   - Focus > Share across devices > On
   - Screen Time > Share across devices > Off
+  - Privacy & Security > Full Disk Access >
+    - Terminal > On
   - Keyboard >
     - Press 🌐 key to > Do Nothing
     - Keyboard Shortcuts >

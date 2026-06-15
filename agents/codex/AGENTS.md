@@ -66,5 +66,8 @@ When relevant always use:
 - **Repo architecture**: `WebFetch("https://deepwiki.com/<github-owner>/<github-repo>")`
 - **Research papers**: `curl "https://arxiv2md.org/api/json?url=<arxiv-doi>"`
 - **YouTube transcripts**: `yt-dlp --write-auto-sub --sub-lang en --skip-download --sub-format vtt -o - "<url>"`
+- **Any web page → markdown**: `curl "https://r.jina.ai/<url>"` (LinkedIn public pages, articles, JS-heavy pages; no auth)
+- **GitHub**: `gh repo view <owner>/<repo>`, `gh search repos/code "<query>"`, `gh issue/pr view <n>`
+- **X/Twitter (read-only)**: `twitter -c feed`, `twitter -c search "<q>"`, `twitter -c user-posts <handle>`, `twitter -c tweet <id>`. Auth via Keychain cookies. On `not_authenticated`/`401`/`403`, refresh once with `~/.dotfiles/bin/x-cookies-to-keychain` (re-copies Helium's x.com cookies → Keychain), then retry. Read-only — never `post/like/follow/retweet`.
 
 For Python, always use `uv` and `uvx` for one-off CLI tools. For TypeScript, always use `pnpm` and `pnpm dlx` respectively.
