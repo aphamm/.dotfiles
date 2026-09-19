@@ -1,0 +1,45 @@
+modelRoles:
+  task: openai-codex/gpt-5.6-sol:high
+  plan: anthropic/claude-fable-5:high
+  slow: anthropic/claude-fable-5:high
+  advisor: anthropic/claude-fable-5:high
+  smol: openai-codex/gpt-5.6-luna:high
+  tiny: openai-codex/gpt-5.6-luna:high
+  designer: anthropic/claude-fable-5:high
+  default: openai-codex/gpt-5.6-sol:high
+setupVersion: 2
+theme:
+  dark: omp-dark
+dev:
+  autoqaConsent: granted
+advisor:
+  enabled: true
+prewalk:
+  enabled: false
+interruptMode: immediate
+doubleEscapeAction: tree
+github:
+  enabled: true
+todo:
+  eager: default
+personality: pragmatic
+plan:
+  enabled: false
+secrets:
+  enabled: true
+providers:
+  tinyModel: online
+speech:
+  enabled: false
+  enhanced: false
+  voice: af_heart
+magicKeywords:
+  orchestrate: true
+hideThinkingBlock: true
+task:
+  agentAdvisor:
+    task: "on"
+composer:
+  shape: box
+debug:
+  enabled: false

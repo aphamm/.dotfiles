@@ -1,0 +1,89 @@
+{
+  // BASICS
+  "files.associations": { "editor.json": "jsonc" },
+  "workbench.statusBar.visible": true,
+  "workbench.startupEditor": "none",
+  "editor.minimap.enabled": false,
+  "extensions.ignoreRecommendations": true,
+  "chat.disableAIFeatures": true,
+
+  // THEMES — auto-switch with OS appearance
+  "window.autoDetectColorScheme": true,
+  "window.zoomLevel": 0.4,
+  "workbench.preferredLightColorTheme": "Ayu Light Bordered",
+  "workbench.preferredDarkColorTheme": "Ayu Dark",
+  "custom-ui-style.font.sansSerif": "Geist Mono",
+  "editor.fontFamily": "Geist Mono",
+
+  // SIDEBAR
+  "workbench.tree.indent": 20,
+  "explorer.compactFolders": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+
+  // EDITOR
+  "editor.fontSize": 16,
+  "editor.fontLigatures": true,
+  "editor.lineHeight": 1.5,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.cursorStyle": "block",
+  // italicize comments
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "comment",
+        "settings": {
+          "fontStyle": "italic"
+        }
+      }
+    ]
+  },
+
+  // FORMATTER
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "editor.tabSize": 2,
+  "editor.detectIndentation": true,
+  "files.autoSave": "afterDelay",
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.defaultFormatter": "biomejs.biome",
+  "[just]": {
+    "editor.formatOnSave": false
+  },
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.ruff": "explicit",
+      "source.organizeImports.ruff": "explicit"
+    },
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+  },
+  "yaml.disableSchemaDetection": [
+    "**/docker-compose.yml",
+    "**/docker-compose.yaml",
+    "**/docker-compose.*.yml",
+    "**/docker-compose.*.yaml",
+    "**/compose.yml",
+    "**/compose.yaml",
+    "**/compose.*.yml",
+    "**/compose.*.yaml"
+  ],
+  "biome.suggestInstallingGlobally": false,
+  "workbench.editorAssociations": {
+    "*.md": "default"
+  },
+  "json.schemaDownload.trustedDomains": {
+    "https://schemastore.azurewebsites.net/": true,
+    "https://raw.githubusercontent.com/microsoft/vscode/": true,
+    "https://raw.githubusercontent.com/devcontainers/spec/": true,
+    "https://www.schemastore.org/": true,
+    "https://json.schemastore.org/": true,
+    "https://json-schema.org/": true,
+    "https://developer.microsoft.com/json-schemas/": true,
+    "https://biomejs.dev": true
+  },
+  "editor.accessibilitySupport": "on"
+}

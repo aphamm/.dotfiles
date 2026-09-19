@@ -1,0 +1,12 @@
+[submodule "agents/external/hegelian-dialectic-skill"]
+	path = technology/agents/external/hegelian-dialectic-skill
+	url = https://github.com/KyleAMathews/hegelian-dialectic-skill.git
+	branch = main
+[submodule "agents/external/mattpocock-skills"]
+	path = technology/agents/external/mattpocock-skills
+	url = https://github.com/mattpocock/skills.git
+	branch = main
+[submodule "agents/external/cursor-plugins"]
+	path = technology/agents/external/cursor-plugins
+	url = https://github.com/cursor/plugins.git
+	branch = main

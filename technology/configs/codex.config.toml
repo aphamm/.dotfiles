@@ -1,0 +1,21 @@
+# Portable preferences. The desktop app manages its own runtime and plugin paths.
+[desktop]
+followUpQueueMode = "steer"
+conversationDetailMode = "STEPS_COMMANDS"
+localeOverride = "en-US"
+mac-menu-bar-enabled = false
+selected-avatar-id = "seedy"
+avatar-overlay-mascot-width-px = 80
+toys-confetti-enabled = false
+
+[features]
+memories = true
+chronicle = true
+
+[[hooks.PreToolUse]]
+matcher = "^Bash$"
+
+[[hooks.PreToolUse.hooks]]
+type = "command"
+command = "/opt/homebrew/bin/ztk rewrite"
+timeout = 5

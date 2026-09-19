@@ -1,0 +1,9 @@
+[user]
+	name = apham
+	email = austinpham77@gmail.com
+
+[init]
+    defaultBranch = main
+
+[pull]
+    rebase = true

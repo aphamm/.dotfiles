@@ -1,0 +1,18 @@
+*.swp
+Brewfile.lock.json
+.DS_Store
+.venv/
+__pycache__/
+*.backup.*
+
+technology/harness/config.yml.lock
+*.bak.*
+
+# Local dependencies and Python bytecode
+node_modules/
+*.pyc
+
+# Local environment files
+.env
+.env.*
+!.env.example

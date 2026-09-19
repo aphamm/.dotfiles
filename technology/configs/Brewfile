@@ -1,0 +1,55 @@
+# Curated restore manifest. Edit intentionally; do not replace with brew bundle dump.
+tap "aphamm/ztk", "https://github.com/aphamm/ztk", trusted: true
+tap "can1357/tap"
+tap "abue-ammar/tinycast"
+# Play, record, convert, and stream select audio and video codecs
+brew "ffmpeg"
+# GitHub command-line tool
+brew "gh"
+# Open source programming language to build simple/reliable/efficient software
+brew "go"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
+# Handy way to save and run project-specific commands
+brew "just"
+# Develop and deploy code with zero configuration
+brew "railway"
+# Static analysis and lint tool, for (ba)sh scripts
+brew "shellcheck"
+# Command-line interface for Vercel
+brew "vercel"
+# Feature-rich command-line audio/video downloader
+brew "yt-dlp"
+# Fish-like fast/unobtrusive autosuggestions for zsh
+brew "zsh-autosuggestions"
+# Fish shell like syntax highlighting for zsh
+brew "zsh-syntax-highlighting"
+# CLI proxy that reduces LLM token consumption
+brew "aphamm/ztk/ztk"
+# Coding agent with the IDE wired in
+brew "can1357/tap/omp", trusted: true
+cask "font-geist-mono"
+# Speech to text application
+cask "handy"
+# Native launcher, hotkeys, and clipboard history
+cask "abue-ammar/tinycast/tinycast", trusted: true
+# Open-source code editor
+cask "visual-studio-code"
+vscode "biomejs.biome"
+vscode "charliermarsh.ruff"
+vscode "davidanson.vscode-markdownlint"
+vscode "ms-python.debugpy"
+vscode "ms-python.python"
+vscode "ms-python.vscode-pylance"
+vscode "ms-python.vscode-python-envs"
+vscode "ms-vscode-remote.remote-ssh"
+vscode "ms-vscode-remote.remote-ssh-edit"
+vscode "ms-vscode.remote-explorer"
+vscode "nefrob.vscode-just-syntax"
+vscode "redhat.vscode-yaml"
+vscode "rust-lang.rust-analyzer"
+vscode "subframe7536.custom-ui-style"
+vscode "tamasfe.even-better-toml"
+vscode "teabyii.ayu"
+vscode "timonwong.shellcheck"
+vscode "usernamehw.errorlens"

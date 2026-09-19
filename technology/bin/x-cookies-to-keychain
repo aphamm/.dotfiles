@@ -1,0 +1,41 @@
+#!/usr/bin/env -S uv run --quiet --script
+# /// script
+# dependencies = ["pycryptodome"]
+# ///
+"""Copy x.com auth cookies from Helium into the macOS Keychain.
+
+Decrypts Helium's (Chromium) cookie store and writes auth_token + ct0 to
+Keychain items twitter_auth_token / twitter_ct0, which ~/.zshrc exports as
+TWITTER_AUTH_TOKEN / TWITTER_CT0 for twitter-cli.
+
+Re-run when the X session expires. First run triggers a one-time Keychain
+prompt to read "Helium Storage Key" — click "Always Allow".
+"""
+import sqlite3, hashlib, subprocess, os
+from Crypto.Cipher import AES
+
+DB = os.path.expanduser("~/Library/Application Support/net.imput.helium/Profile 3/Cookies")
+KEY_SVC = "Helium Storage Key"          # Helium's Chromium safe-storage keychain entry
+WANT = {"twitter_auth_token": "auth_token", "twitter_ct0": "ct0"}
+
+pw = subprocess.check_output(["security", "find-generic-password", "-s", KEY_SVC, "-w"]).strip()
+key = hashlib.pbkdf2_hmac("sha1", pw, b"saltysalt", 1003, 16)   # Chromium macOS KDF
+
+def decrypt(ev):
+    assert ev[:3] == b"v10", ev[:3]
+    dec = AES.new(key, AES.MODE_CBC, b" " * 16).decrypt(ev[3:])
+    dec = dec[:-dec[-1]]                 # strip PKCS7 padding
+    try:    return dec.decode()          # older Chromium: plaintext value
+    except: return dec[32:].decode()     # newer (Helium): strip 32-byte sha256 domain prefix
+
+con = sqlite3.connect(f"file:{DB}?immutable=1", uri=True)
+rows = dict(con.execute(
+    "SELECT name, encrypted_value FROM cookies "
+    "WHERE host_key LIKE '%x.com' AND name IN ('auth_token','ct0')").fetchall())
+
+for svc, name in WANT.items():
+    val = decrypt(rows[name])
+    print(f"{name}: len={len(val)}")     # never print the value
+    subprocess.run(["security", "add-generic-password", "-a", os.environ["USER"],
+                    "-s", svc, "-U", "-A", "-w", val], check=True)
+print("stored into Keychain ✅  (open a new shell to pick up the env vars)")

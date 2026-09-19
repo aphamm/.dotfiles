@@ -1,0 +1,18 @@
+# aphamm/.dotfiles
+
+[private]
+default:
+    @just --list
+
+# Update external sources and validate skills
+pull-external:
+    bash scripts/pull-external.sh
+
+# Format, lint, and validate skills
+check:
+    pnpm dlx @biomejs/biome format --config-path=configs/biome.json --write .
+    shellcheck --severity=error *.sh init/*.sh scripts/*.sh
+    pnpm dlx @biomejs/biome lint --config-path=configs/biome.json .
+    bash scripts/check-skills.sh
+    git diff --check
+    git diff --cached --check
